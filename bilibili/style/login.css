@@ -1,0 +1,446 @@
+body,
+html,
+div,
+ul,
+li,
+a
+{
+    font-family: 'Microsoft YaHei',Arial;
+    font-size: 14px;
+
+    margin: 0;
+    padding: 0;
+
+    color: #222;
+}
+ul
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+
+    color: #222;
+}
+a:hover
+{
+    color: #5aa8d7;
+}
+div,
+input,
+ul,
+li
+{
+    box-sizing: border-box;
+}
+input
+{
+    outline: none;
+}
+img
+{
+	cursor: pointer;
+}
+.top,
+.main,
+.bottom
+{
+    width: 100%;
+}
+.nav_banner
+{
+    background: #fff;
+    width: 100%;
+    height: 42px;
+    box-shadow: 0 1px 5px #aaa;
+}
+.nav
+{
+    line-height: 42px;
+
+    width: 980px;
+    height: 42px;
+    margin: 0 auto;
+}
+.icon
+{
+    position: absolute;
+    top: 10px;
+    left: -25px;
+
+    width: 36px;
+    height: 36px;
+
+    background: url('../img/bilibili.png') no-repeat;
+}
+.nav_left_menu > li
+{
+    line-height: 42px;
+
+    position: relative;
+
+    float: left;
+
+    height: 42px;
+    margin: 0 12px;
+
+    cursor: pointer;
+    text-align: center;
+}
+.nav_left_menu > li:hover
+{
+    color: #00a0d8;
+}
+.nav_right
+{
+    float: right;
+
+    height: 42px;
+}
+.nav_right_search
+{
+    height: 32px;
+    position: relative;
+    right: 50px;
+}
+.nav_right_search > input
+{
+    width: 120px;
+    height: 32px;
+    padding-left: 10px;
+
+    border: 1px solid #ccd0d7;
+    border-radius: 16px;
+    position: relative;
+    top: -1px;
+    font-size: 12px;
+}
+.nav_right_search_button
+{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: url('../img/search.png');
+    position: relative;
+    top: -30px;
+    right: -90px;
+}
+.nav_right_search_button:hover
+{
+    background: url('../img/search_hover.png');
+}
+.nav_right_log
+{
+    line-height: 42px;
+
+    height: 42px;
+}
+.nav_right_log_list
+{
+    line-height: 42px;
+
+    height: 42px;
+}
+.nav_right_log_list > li
+{
+    width: 50px;
+    cursor: pointer;
+    line-height: 42px;
+
+    float: left;
+
+    height: 42px;
+    margin: 0 2px;
+}
+.nav_right_submit
+{
+    line-height: 42px;
+
+    width: 58px;
+    height: 48px;
+
+    cursor: pointer;
+    text-align: center;
+
+    opacity: 1;
+    color: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: -webkit-linear-gradient(#f35d8f, #d5517d);
+    background:      -o-linear-gradient(#f35d8f, #d5517d);
+    background:    -moz-linear-gradient(#f35d8f, #d5517d);
+    background:         linear-gradient(#f35d8f, #d5517d);
+}
+.nav_right_submit:hover
+{
+    background: -webkit-linear-gradient(#ff86ae, #e3779b);
+    background:      -o-linear-gradient(#ff86ae, #e3779b);
+    background:    -moz-linear-gradient(#ff86ae, #e3779b);
+    background:         linear-gradient(#ff86ae, #e3779b);
+}
+.top
+{
+    height: 86px;
+
+    background-color: #00a0d8;
+}
+.top_content
+{
+    width: 980px;
+    height: 106px;
+    margin: 0 auto;
+
+    background: url('../img/top.png') no-repeat;
+}
+.line
+{
+    position: relative;
+
+    width: 980px;
+    height: 47px;
+    margin: 0 auto;
+
+    border-bottom: 2px solid #ddd;
+}
+.line_log_img
+{
+    position: absolute;
+    top: 20px;
+    left: 430px;
+
+    width: 120px;
+    height: 47px;
+
+    background: url('../img/login.png') no-repeat;
+}
+.main
+{
+    overflow: hidden;
+
+    width: 980px;
+    height: 337px;
+    margin: 0 auto;
+}
+.main_left,
+.main_right
+{
+    position: relative;
+
+    float: left;
+
+    width: 50%;
+    height: inherit;
+}
+div.main_left_tip
+{
+    font-size: 18px;
+
+    position: absolute;
+    top: 235px;
+
+    width: 490px;
+
+    text-align: center;
+}
+img.main_left_smalltv
+{
+    position: absolute;
+    top: 30px;
+    left: 150px;
+}
+img.main_left_2233
+{
+    position: absolute;
+    top: 195px;
+    left: -5px;
+}
+img.main_left_loadtv
+{
+    position: absolute;
+    top: 105px;
+    left: 190px;
+}
+.main_right_function_banner/*功能块整体移动*/
+{
+    width: 400px;
+    height: 288px;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+}
+.input_tip
+{
+    width: 400px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    color: #f6729b;
+    opacity: 0;
+}
+input.user_input
+{
+    height: 40px;
+    padding: 10px;
+
+    opacity: .5;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+input.user_account,
+input.password
+{
+    width: 400px;
+}
+input.pin
+{
+    width: 182px;
+
+    background-color: #f9fafc;
+}
+
+
+
+.main_right_button
+{
+    width: 400px;
+    position: relative;
+    top: 30px;
+}
+.button_link:hover
+{
+	color: #000;
+}
+.main_right_login,
+.main_right_register
+{
+	cursor: pointer;
+    line-height: 38px;
+
+    float: left;
+
+    width: 184px;
+    height: 38px;
+
+    text-align: center;
+
+    border-radius: 2px;
+    outline: none;
+}
+.main_right_login
+{
+    color: #fff;
+    border: 1px solid #0381aa;
+    background-color: #00a7de;
+}
+.main_right_login:hover
+{
+    background-color: #00bee7;
+}
+.main_right_register
+{
+    color: #555;margin-left: 32px;
+    border: 1px solid #ccc;
+}
+.main_right_register:hover
+{
+	background-color: #f7f7f7;
+}
+.bottom
+{
+    position: relative;
+    top: 50px;
+
+    width: 100%;
+    height: 422px;
+
+    background-color: #f6f9f6;
+}
+.bottom_link
+{
+    position: relative;
+    top: 50px;
+
+    height: 112px;
+}
+.bottom_wrap
+{
+    width: 980px;
+    height: 342px;
+    margin: 0 auto;
+}
+.bottom_link_left,
+.bottom_link_mid
+{
+    float: left;
+
+    width: 349px;
+    height: 112px;
+
+    border-right: 1px solid #e5e9ef;
+}
+.bottom_link_left_title,
+.bottom_link_mid_title
+{
+    height: 28px;
+    padding-left: 20px;
+
+    color: #777;
+}
+.bottom_link_left_list,
+.bottom_link_mid_list
+{
+    height: 84px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.bottom_link_left_list > li
+{
+    line-height: 28px;
+
+    float: left;
+
+    width: 102px;
+    height: 28px;
+}
+.bottom_link_mid_list > li
+{
+    line-height: 28px;
+
+    float: left;
+
+    width: 102px;
+    height: 28px;
+}
+.bottom_link_right
+{
+    float: right;
+
+    width: 282px;
+    height: 112px;
+}
+.bottom_link_right_phone,
+.bottom_link_right_blog,
+.bottom_link_right_wechat
+{
+    float: left;
+
+    width: 56px;
+    height: 56px;
+    margin-left: 30px;
+}
+.bottom_info
+{
+    position: relative;
+    top: 100px;
+
+    width: 980px;
+    height: 80px;
+}
+.bottom_info_block
+{
+    float: left;
+    margin-left: 20px;
+    font-size: 10px;
+    line-height: 1;
+}
