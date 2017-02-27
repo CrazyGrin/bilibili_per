@@ -50,7 +50,7 @@
 					<input class="user_account user_input" type="text" name="user_account" placeholder="你的手机号码/邮箱"></div>
 				<div class="main_right_password_input_tip input_tip">喵,你没输入密码吗?</div>
 				<div class="main_right_password_input">
-					<input class="password user_input" type="password" name="password" placeholder="密码"></div>
+					<input class="user_password user_input" type="password" name="user_password" placeholder="密码"></div>
 				<div class="main_right_pin_ipnut_tip input_tip">请输入验证码</div>
 				<div class="main_right_pin_ipnut">
 					<input class="pin user_input" type="text" name="pin" placeholder="验证码"></div>

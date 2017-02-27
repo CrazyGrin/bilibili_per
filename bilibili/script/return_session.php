@@ -1,2 +1,2 @@
 <?php
-	echo "1";
+	echo $_SESSION['user_account'];

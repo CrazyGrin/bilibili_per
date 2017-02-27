@@ -36,7 +36,7 @@ btn_register.addEventListener('click',function(){
                         if (xml.readyState === 4 && xml.status === 200) {
                             if (xml.responseText == "注册成功") {
                                 alert(xml.responseText);
-                                // self.location='../index.php';
+                                self.location = '../index.php';
                             }else{
                                 alert(xml.responseText);
                             };

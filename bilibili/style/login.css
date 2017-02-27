@@ -288,7 +288,7 @@ input.user_input
     border-radius: 2px;
 }
 input.user_account,
-input.password
+input.user_password
 {
     width: 400px;
 }

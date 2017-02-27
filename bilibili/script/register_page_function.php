@@ -6,6 +6,7 @@ if (!empty($_POST)) {
 
 		$addpsd = "woshizuibangde";
 		$user_account = addslashes($_POST['user_account']);
+    	$user_password = $_POST['user_password'];
     	$user_password = md5(md5($_POST['user_password']).$addpsd);
     	$phone = addslashes($_POST['phone']);
 
@@ -18,7 +19,6 @@ if (!empty($_POST)) {
 		else{
 			$pdo->exec("insert into user_info (user_account,user_password,user_phone) values ('{$user_account}','{$user_password}','{$phone}')");
 			echo "注册成功";
-			header('Location:../index.php');
 		};
 	}
 	else{

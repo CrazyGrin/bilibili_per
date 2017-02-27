@@ -5,6 +5,21 @@ var isonline = 0;
 var swing_list = document.querySelector('.swing_list');
 var loaction = 0;
 
+//载入函数
+window.onload = function(){
+	// alert('123');
+	// var xml = new XMLHttpRequest();
+	// xml.open('GET', 'script/return_session.php', true);
+	// xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	// xml.send(null);
+	// if (xml.responseText != '') {
+	// 	isonline = 1;
+	// 	alert(xml.responseText);
+	// };
+	alert(getCookie("user_account"));
+};
+
+
 //轮播
 function swing(){
 	setInterval(function(){
@@ -17,28 +32,32 @@ function swing(){
 		};
 	},3000);
 };
-//载入函数
 
-window.onload = function(){
-	swing();
+//获取登录状态的cookie
+function getCookie(name) 
+{ 
+    var arr,reg=new RegExp("(^| )"+ name +"=([^;]*)(;|$)");
+ 
+    if(arr=document.cookie.match(reg))
+ 
+        return unescape(arr[2]); 
+    else 
+        return null; 
 };
 
-//获取登录状态
-// window.onload = function(){
+
+//页面跳转
+login_link.addEventListener('click',function(){
+	self.location = 'login.php';
+});
+
+// nav_right_submit.addEventListener('click',function(){
 // 	var xml = new XMLHttpRequest();
 // 	xml.open('GET', 'script/return_session.php', true);
 // 	xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 // 	xml.send(null);
 // 	if (xml.responseText != '') {
-// 		// console.log(xml.responseText);
 // 		isonline = 1;
+// 		self.location = 'post_file.php';
 // 	};
-// 	console.log(isonline);
-// };
-//页面跳转
-login_link.addEventListener('click',function(){
-
-});
-nav_right_submit.addEventListener('click',function(){
-    self.location = 'post_file.php';
-});
+// });

@@ -18,6 +18,9 @@ ul
 {
     list-style: none;
 }
+li{
+    cursor: pointer;
+}
 a
 {
     font-weight: 300;
@@ -29,12 +32,11 @@ a
 div,
 input,
 ul,
-li,
-p
+li
 {
-	margin: 0;
-	padding: 0;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 input
 {
@@ -53,47 +55,60 @@ p.video
 }
 p.heat_video
 {
-	font-size: 12px;
+    font-size: 12px;
     line-height: 20px;
 
     overflow: hidden;
 
     height: 40px;
-    padding: 0 10px 0 10px;
     margin-top: 10px;
+    padding: 0 10px 0 10px;
 }
 p.title_tip
 {
     font-size: 12px;
-    opacity: .7;
+
     float: right;
+
     width: 780px;
+
+    opacity: .7;
 }
-div.board_number_top{
-width: 20px;
-height: 20px;
-text-align: center;
-line-height: 20px;
-float: left;
-color: #fff;
-border-radius: 5px;
-font-size: 10px;
-font-weight: 700;
-background-color: #f25d8e;
-margin-right: 10px;
+div.board_number_top
+{
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 20px;
+
+    float: left;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 5px;
+    background-color: #f25d8e;
 }
-div.board_number_nor{
-width: 20px;
-height: 20px;
-text-align: center;
-line-height: 20px;
-float: left;
-color: #fff;
-border-radius: 5px;
-font-size: 10px;
-font-weight: 700;
-margin-right: 10px;
-background-color: #b8c0cc;
+div.board_number_nor
+{
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 20px;
+
+    float: left;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 5px;
+    background-color: #b8c0cc;
 }
 img
 {
@@ -123,10 +138,12 @@ img.big_video
 
     background: url('../img/top_banner.png') no-repeat;
 }
-.big_adv{
-	height: 96px;
-	width: 1160px;
-	clear: both;
+.big_adv
+{
+    clear: both;
+
+    width: 1160px;
+    height: 96px;
 }
 .blur
 {
@@ -347,8 +364,8 @@ img.big_video
 
     width: 440px;
     height: 220px;
-    border-radius: 5px;
 
+    border-radius: 5px;
     background-color: black;
 }
 .swing_list
@@ -367,20 +384,26 @@ img.big_video
 {
     float: left;
 }
-.video_brief{
-	opacity: 0;
-	top: 0;
-	color: #fff;
-	position: absolute;
-	width: 160px;
-	height: 100px;
-	background-color: rgba(0,0,0,.7);
-	-webkit-transition: opacity .5s;
-	-o-transition: opacity .5s;
-	transition: opacity .5s;
+.video_brief
+{
+    position: absolute;
+    top: 0;
+
+    width: 160px;
+    height: 100px;
+
+    -webkit-transition: opacity .5s;
+         -o-transition: opacity .5s;
+            transition: opacity .5s;
+
+    opacity: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,.7);
 }
 .main_heat_video > li
 {
+    position: relative;
+
     float: left;
 
     width: 160px;
@@ -389,11 +412,10 @@ img.big_video
     margin-left: 20px;
 
     background-color: black;
-    position: relative;
 }
 .main_heat_video > li:hover .video_brief
 {
-	opacity: 1;
+    opacity: 1;
 }
 .main_extend
 {
@@ -417,32 +439,40 @@ img.big_video
 }
 .main_extend_video
 {
+    float: left;
+
     width: 900px;
     height: 155px;
-    float: left;
 }
 .main_extend_video > li
 {
     float: left;
+    overflow: hidden;
 
     width: 160px;
     height: 155px;
     margin-right: 20px;
-    border-radius: 5px;
-    overflow: hidden;
+
+    position: relative;
+}
+.main_extend_video > li:hover .video_brief
+{
+    opacity: 1;
 }
 .main_extend_adv
 {
+    float: right;
+    overflow: hidden;
+
     width: 260px;
     height: 194px;
-    float: right;
+
     border-radius: 5px;
-    overflow: hidden;
 }
 .main_comic
 {
-	width: 1160px;
-	height: 396px;
+    width: 1160px;
+    height: 396px;
 }
 .main_comic_nav
 {
@@ -461,32 +491,40 @@ img.big_video
 }
 .main_comic_video
 {
+    float: left;
+
     width: 900px;
     height: 336px;
-    float: left;
 }
 .main_comic_video > li
 {
     float: left;
+    overflow: hidden;
 
     width: 160px;
     height: 168px;
     margin-right: 20px;
-    border-radius: 5px;
-    overflow: hidden;
+    position: relative;
 }
-.main_comic_board{
+.main_comic_video > li:hover .video_brief{
+    opacity: 1;
+}
+.main_comic_board
+{
+    float: right;
+
     width: 260px;
     height: 310px;
-    float: right;
 }
 .main_comic_board_list > li
 {
+    font-size: 10px;
+    line-height: 20px;
+
+    overflow: hidden;
+
     width: 260px;
     height: 20px;
-    line-height: 20px;
-    overflow: hidden;
-    font-size: 10px;
     margin: 20px 0;
 }
 
