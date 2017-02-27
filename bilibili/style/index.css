@@ -62,6 +62,39 @@ p.heat_video
     padding: 0 10px 0 10px;
     margin-top: 10px;
 }
+p.title_tip
+{
+    font-size: 12px;
+    opacity: .7;
+    float: right;
+    width: 780px;
+}
+div.board_number_top{
+width: 20px;
+height: 20px;
+text-align: center;
+line-height: 20px;
+float: left;
+color: #fff;
+border-radius: 5px;
+font-size: 10px;
+font-weight: 700;
+background-color: #f25d8e;
+margin-right: 10px;
+}
+div.board_number_nor{
+width: 20px;
+height: 20px;
+text-align: center;
+line-height: 20px;
+float: left;
+color: #fff;
+border-radius: 5px;
+font-size: 10px;
+font-weight: 700;
+margin-right: 10px;
+background-color: #b8c0cc;
+}
 img
 {
     cursor: pointer;
@@ -260,11 +293,6 @@ img.big_video
     background:    -moz-linear-gradient(#ff86ae, #e3779b);
     background:         linear-gradient(#ff86ae, #e3779b);
 }
-
-
-
-
-
 .main
 {
     width: 1160px;
@@ -367,25 +395,25 @@ img.big_video
 {
 	opacity: 1;
 }
-
 .main_extend
 {
-	height: 194px;
+    width: 1160px;
+    height: 214px;
 }
 .main_extend_nav
 {
     width: 1160px;
-    height: 40px;
+    height: 60px;
 }
 .main_extend_nav_title
 {
     font-size: 24px;
-    line-height: 36px;
+    line-height: 60px;
 
     float: left;
 
     width: 900px;
-    height: 40px;
+    height: 60px;
 }
 .main_extend_video
 {
@@ -405,12 +433,70 @@ img.big_video
 }
 .main_extend_adv
 {
-	width: 260px;
-	height: 194px;
-	float: right;
-	border-radius: 5px;
-	overflow: hidden;
+    width: 260px;
+    height: 194px;
+    float: right;
+    border-radius: 5px;
+    overflow: hidden;
 }
+.main_comic
+{
+	width: 1160px;
+	height: 396px;
+}
+.main_comic_nav
+{
+    width: 1160px;
+    height: 60px;
+}
+.main_comic_nav_title
+{
+    font-size: 24px;
+    line-height: 60px;
+
+    float: left;
+
+    width: 900px;
+    height: 60px;
+}
+.main_comic_video
+{
+    width: 900px;
+    height: 336px;
+    float: left;
+}
+.main_comic_video > li
+{
+    float: left;
+
+    width: 160px;
+    height: 168px;
+    margin-right: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.main_comic_board{
+    width: 260px;
+    height: 310px;
+    float: right;
+}
+.main_comic_board_list > li
+{
+    width: 260px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    font-size: 10px;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+
 
 
 

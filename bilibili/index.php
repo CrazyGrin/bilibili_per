@@ -106,31 +106,64 @@
 			<ul class="main_heat_video">
 				<li><img class="small_video" src="img/demo1.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
 				<li><img class="small_video" src="img/demo2.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
-				<li><img class="small_video" src="img/demo6.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
-				<li><img class="small_video" src="img/demo1.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
-				<li><img class="small_video" src="img/demo5.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
 				<li><img class="small_video" src="img/demo3.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
 				<li><img class="small_video" src="img/demo4.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
+				<li><img class="small_video" src="img/demo8.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
 				<li><img class="small_video" src="img/demo6.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
+				<li><img class="small_video" src="img/demo7.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
+				<li><img class="small_video" src="img/demo5.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
 			</ul>
 		</div>
 		<br>
 		<br>
 		<div class="main_extend">
 			<div class="main_extend_nav">
-				<div class="main_extend_nav_title"><img src="img/zone_icon.png" style="float: left;">推广 <p style="font-size: 12px;float: right;margin-right: 680px;">最光荣的时刻,就是现在</p></div>
+				<div class="main_extend_nav_title"><img src="img/zone_icon.png" style="float: left;">推广 <p class="title_tip">最光荣的时刻,就是现在</p></div>
 			</div>
 			<ul class="main_extend_video">
 				<li>
-					<img class="small_video" src="img/demo1.png">
+					<img class="small_video" src="img/demo7.png">
 					<p class="video">【SD】龙女仆乱入脑洞小剧场第一弹，我可能是用了错误的打开方式</p>
 				</li>
 				<li>
-					<img class="small_video" src="img/demo2.png">
+					<img class="small_video" src="img/demo6.png">
+					<p class="video">【兜帽】让UP主来告诉你，《怪物猎人》系列大型DLC</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo5.png">
+					<p class="video">【动漫新故事】如果fate变成saber的代练升级之路——第一届全国中小</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo4.png">
 					<p class="video">【兜帽】让UP主来告诉你，《怪物猎人》系列大型DLC</p>
 				</li>
 				<li>
 					<img class="small_video" src="img/demo3.png">
+					<p class="video">【SD】龙女仆乱入脑洞小剧场第一弹，我可能是用了错误的打开方式</p>
+				</li>
+			</ul>
+			<div class="main_extend_adv">
+				<img src="img/extend_adv.png">
+			</div>
+		</div>
+		<div class="big_adv"><img src="img/adv1.png"></div><br><br>
+
+
+		<div class="main_comic">
+			<div class="main_comic_nav">
+				<div class="main_comic_nav_title"><img src="img/zone_icon.png" style="float: left;">动画<p class="title_tip">动画(｡･∀･)ﾉﾞ</p></div>
+			</div>
+			<ul class="main_comic_video">
+				<li>
+					<img class="small_video" src="img/demo8.png">
+					<p class="video">【SD】龙女仆乱入脑洞小剧场第一弹，我可能是用了错误的打开方式</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo7.png">
+					<p class="video">【兜帽】让UP主来告诉你，《怪物猎人》系列大型DLC</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo6.png">
 					<p class="video">【动漫新故事】如果fate变成saber的代练升级之路——第一届全国中小</p>
 				</li>
 				<li>
@@ -141,12 +174,45 @@
 					<img class="small_video" src="img/demo5.png">
 					<p class="video">【SD】龙女仆乱入脑洞小剧场第一弹，我可能是用了错误的打开方式</p>
 				</li>
+				<li>
+					<img class="small_video" src="img/demo3.png">
+					<p class="video">【SD】龙女仆乱入脑洞小剧场第一弹，我可能是用了错误的打开方式</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo2.png">
+					<p class="video">【兜帽】让UP主来告诉你，《怪物猎人》系列大型DLC</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo5.png">
+					<p class="video">【动漫新故事】如果fate变成saber的代练升级之路——第一届全国中小</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo1.png">
+					<p class="video">【兜帽】让UP主来告诉你，《怪物猎人》系列大型DLC</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo8.png">
+					<p class="video">【SD】龙女仆乱入脑洞小剧场第一弹，我可能是用了错误的打开方式</p>
+				</li>
 			</ul>
-			<div class="main_extend_adv">
-				<img src="img/extend_adv.png">
+			<div class="main_comic_board">
+				<ul class="main_comic_board_list">
+					<li style="height: 70px;line-height: 20px;margin-top: 0;"><div class="board_number_top">1</div>
+					<img src="img/demo7.png" style="width: 80px;height: 50px;float: left;margin-right: 10px;">【SD】龙女仆乱入脑洞小剧场第一弹，我可能是用了错误的打开方式</li>
+					<li><div class="board_number_top">2</div>【东方栀子MMD】墨染覆雪，紫藤花开「极乐净土」</li>
+					<li><div class="board_number_top">3</div>一月新番里还有合格的福利番吗</li>
+					<li><div class="board_number_nor">4</div>重音Teto-红衣媚舞 雙面戦争Reversible Campaign</li>
+					<li><div class="board_number_nor">5</div>2017年4月（春）新番推荐 ~【次元中转站】</li>
+					<li><div class="board_number_nor">6</div>【剧场版】为何《刀剑神域 序列之争》要将现实与虚构画上等号？</li>
+					<li><div class="board_number_nor">7</div>10部儿童不宜的动画作品，看过这些才是真正的大人</li>
+				</ul>
 			</div>
-			<div class="big_adv"><img src="img/adv1.png"></div>
 		</div>
+
+
+
+
+
 	</div>
 	<div class="bottom">
 		<div class="bottom_wrap">
