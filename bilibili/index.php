@@ -47,9 +47,107 @@
 		</div>
 	</div>
 	<div class="main">
-		
+		<div class="main_nav">
+			<ul class="main_nav_list">
+				<li>
+					<a href="">首页</a>
+				</li>
+				<li>
+					<a href="">动画</a>
+				</li>
+				<li>
+					<a href="">番剧</a>
+				</li>
+				<li>
+					<a href="">音乐</a>
+				</li>
+				<li>
+					<a href="">舞蹈</a>
+				</li>
+				<li>
+					<a href="">游戏</a>
+				</li>
+				<li>
+					<a href="">科技</a>
+				</li>
+				<li>
+					<a href="">生活</a>
+				</li>
+				<li>
+					<a href="">鬼畜</a>
+				</li>
+				<li>
+					<a href="">时尚</a>
+				</li>
+				<li>
+					<a href="">广告</a>
+				</li>
+				<li>
+					<a href="">娱乐</a>
+				</li>
+				<li>
+					<a href="">影视</a>
+				</li>
+			</ul>
+		</div>
+		<div class="main_heat">
+			<div class="main_heat_swing">
+				<ul class="swing_list">
+					<li>
+						<img src="img/swing_1.png"></li>
+					<li>
+						<img src="img/swing_2.png"></li>
+					<li>
+						<img src="img/swing_3.png"></li>
+					<li>
+						<img src="img/swing_4.png"></li>
+				</ul>
+			</div>
+			<ul class="main_heat_video">
+				<li><img class="small_video" src="img/demo1.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
+				<li><img class="small_video" src="img/demo2.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
+				<li><img class="small_video" src="img/demo6.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
+				<li><img class="small_video" src="img/demo1.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
+				<li><img class="small_video" src="img/demo5.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
+				<li><img class="small_video" src="img/demo3.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
+				<li><img class="small_video" src="img/demo4.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
+				<li><img class="small_video" src="img/demo6.png"><div class="video_brief"><p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p></div></li>
+			</ul>
+		</div>
+		<br>
+		<br>
+		<div class="main_extend">
+			<div class="main_extend_nav">
+				<div class="main_extend_nav_title"><img src="img/zone_icon.png" style="float: left;">推广 <p style="font-size: 12px;float: right;margin-right: 680px;">最光荣的时刻,就是现在</p></div>
+			</div>
+			<ul class="main_extend_video">
+				<li>
+					<img class="small_video" src="img/demo1.png">
+					<p class="video">【SD】龙女仆乱入脑洞小剧场第一弹，我可能是用了错误的打开方式</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo2.png">
+					<p class="video">【兜帽】让UP主来告诉你，《怪物猎人》系列大型DLC</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo3.png">
+					<p class="video">【动漫新故事】如果fate变成saber的代练升级之路——第一届全国中小</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo4.png">
+					<p class="video">【兜帽】让UP主来告诉你，《怪物猎人》系列大型DLC</p>
+				</li>
+				<li>
+					<img class="small_video" src="img/demo5.png">
+					<p class="video">【SD】龙女仆乱入脑洞小剧场第一弹，我可能是用了错误的打开方式</p>
+				</li>
+			</ul>
+			<div class="main_extend_adv">
+				<img src="img/extend_adv.png">
+			</div>
+			<div class="big_adv"><img src="img/adv1.png"></div>
+		</div>
 	</div>
-
 	<div class="bottom">
 		<div class="bottom_wrap">
 			<div class="bottom_link">
