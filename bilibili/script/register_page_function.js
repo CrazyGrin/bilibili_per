@@ -15,18 +15,28 @@ var button = document.querySelector('.main_button_register');
 
 var nav_right_submit = document.querySelector('.nav_right_submit');
 
+var xml = new XMLHttpRequest();
+
 btn_register.addEventListener('click',function(){
+
     var user_account = document.querySelector('.user_account').value;
     var user_password = document.querySelector('.user_password').value;
     var phone = document.querySelector('.phone').value;
 
     if (user_account.length >= 6 && user_account.length <=20) {
+
         user_account_tip.innerHTML = "";
+
         if (user_password.length >= 6 && user_password.length <=20) {
+
             password_tip.innerHTML = "";
+
             if (phone.length == 11) {
+
                 phone_tip.innerHTML = "";
+
                 if (checkbox.checked == true) {
+
                     var xml = new XMLHttpRequest();
                     xml.open('POST', '../script/register_page_function.php', true);
                     xml.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
@@ -34,14 +44,22 @@ btn_register.addEventListener('click',function(){
 
                     xml.onreadystatechange = function(){
                         if (xml.readyState === 4 && xml.status === 200) {
+
                             if (xml.responseText == "注册成功") {
+
                                 alert(xml.responseText);
                                 self.location = '../index.php';
+
                             }else{
+
                                 alert(xml.responseText);
+
                             };
+
                         };
+
                     };
+
                 };
             }else{
                 phone_tip.innerHTML = "请填一个正常的手机号";
@@ -56,18 +74,26 @@ btn_register.addEventListener('click',function(){
 
 //协议视图
 checkbox.addEventListener('click',function(){
+
     if (checkbox.checked == true) {
+
         button.style.backgroundColor = "#00a0da";
         button.style.color = "#fff";
         button.style.cursor = "pointer";
+
     }else{
+
         button.style.backgroundColor = "#f9f9f9";
         button.style.color = "#aaa";
         button.style.cursor = "default";
+
     };
+
 });
 
 //页面跳转
 nav_right_submit.addEventListener('click',function(){
+
     self.location = 'post_file.php';
+    
 });

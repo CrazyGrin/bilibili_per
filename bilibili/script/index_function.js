@@ -7,16 +7,8 @@ var loaction = 0;
 
 //载入函数
 window.onload = function(){
-	// alert('123');
-	// var xml = new XMLHttpRequest();
-	// xml.open('GET', 'script/return_session.php', true);
-	// xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-	// xml.send(null);
-	// if (xml.responseText != '') {
-	// 	isonline = 1;
-	// 	alert(xml.responseText);
-	// };
-	alert(getCookie("user_account"));
+	delCookie("user_account");
+	var demo = getCookie("user_account");
 };
 
 
@@ -30,26 +22,59 @@ function swing(){
 			loaction = 0;
 			swing_list.style.right = loaction;
 		};
-	},3000);
+	},1000);
 };
 
-//获取登录状态的cookie
-function getCookie(name) 
-{ 
-    var arr,reg=new RegExp("(^| )"+ name +"=([^;]*)(;|$)");
- 
-    if(arr=document.cookie.match(reg))
- 
-        return unescape(arr[2]); 
-    else 
-        return null; 
+//cookie封装(未研究)
+function setCookie(name, value) {
+    var Days = 30;
+    var exp = new Date();
+    exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+    document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+}
+function getCookie(name) {
+    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+
+    if (arr = document.cookie.match(reg)) {
+        return unescape(arr[2]);
+    } else {
+        return null;
+    };
 };
+function delCookie(name) {
+    var exp = new Date();
+    exp.setTime(exp.getTime() - 1);
+    var cval = getCookie(name);
+    if (cval != null) {
+        document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+    };
+}
 
 
 //页面跳转
 login_link.addEventListener('click',function(){
 	self.location = 'login.php';
 });
+
+
+//检测用户状态
+// function isOnline(){
+// 	var xml = new XMLHttpRequest();
+// 	xml.open('GET', 'script/login_page_function.php', true);
+// 	xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+// 	xml.send(null);
+// 	xml.onreadystatechange = function(){
+// 		if (xml.readyState === 4 && xml.status === 200) {
+// 			if (xml.responseText == 0) {
+				
+// 			};
+// 		};
+// 	};
+// };
+
+
+
+
 
 // nav_right_submit.addEventListener('click',function(){
 // 	var xml = new XMLHttpRequest();
