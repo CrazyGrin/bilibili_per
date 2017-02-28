@@ -29,7 +29,17 @@
 					</li>
 				</ul>
 				<div class="nav_right_submit nav_right">投 稿</div>
+
+
 				<div class="nav_right_log nav_right">
+				<ul class="nav_right_user_list">
+					<div class="head_pic_banner"><img class="head_pic" src=<?php echo $_COOKIE["user_head_url"] ?>>
+					</div>
+					<li><a href="">消息</a></li>
+					<li><a href="">动态</a></li>
+					<li><a href="">收藏夹</a></li>
+					<li><a href="">历史</a></li>
+				</ul>
 					<ul class="nav_right_log_list">
 						<li>
 							<a class="login_link" href="page/login.php">登录</a>
@@ -43,6 +53,8 @@
 					<input class="search" type="text" name="search" placeholder="搜索">
 					<div class="nav_right_search_button"></div>
 				</div>
+
+
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,276 @@
+body,
+html,
+div,
+ul,
+li,
+a,
+img
+{
+    font-family: 'Microsoft YaHei',Arial;
+    font-size: 14px;
+
+    margin: 0;
+    padding: 0;
+
+    color: #222;
+}
+ul
+{
+    list-style: none;
+}
+li{
+    cursor: pointer;
+}
+a
+{
+    font-weight: 300;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+div,
+input,
+ul,
+li
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+input
+{
+    outline: none;
+}
+img
+{
+    cursor: pointer;
+}
+.top,
+.main,
+.bottom
+{
+    width: 100%;
+}
+.top
+{
+    position: relative;
+
+    height: 170px;
+
+    background: url('../img/top_banner.png') no-repeat;
+}
+.big_adv
+{
+    clear: both;
+
+    width: 1160px;
+    height: 96px;
+}
+.blur
+{
+    overflow: hidden;
+
+    width: 100%;
+    height: 42px;
+
+    background-color: rgba(0,0,0,.3);
+}
+.nav_banner
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 42px;
+
+    background-color: rgba(0,0,0,.3);
+}
+.nav
+{
+    line-height: 42px;
+
+    width: 1160px;
+    height: 42px;
+    margin: 0 auto;
+}
+.icon
+{
+    position: absolute;
+    top: 10px;
+    left: -25px;
+
+    width: 36px;
+    height: 36px;
+
+    background: url('../img/bilibili.png') no-repeat;
+}
+.nav_left_menu > li
+{
+    line-height: 42px;
+
+    position: relative;
+
+    float: left;
+
+    width: 50px;
+    height: 42px;
+    margin: 0 12px;
+
+    cursor: pointer;
+    -webkit-transition: background-color .3s;
+         -o-transition: background-color .3s;
+            transition: background-color .3s;
+    text-align: center;
+}
+.nav_left_menu > li:hover
+{
+    background-color: rgba(255,255,255,.4);
+}
+.nav_right
+{
+    float: right;
+
+    height: 42px;
+}
+.nav_right_search
+{
+    position: relative;
+    right: 50px;
+
+    height: 32px;
+}
+.nav_right_search > input
+{
+    font-size: 12px;
+
+    position: relative;
+    top: -1px;
+
+    width: 120px;
+    height: 32px;
+    padding-left: 10px;
+
+    border: 1px solid #ccd0d7;
+    border-radius: 16px;
+}
+.nav_right_search_button
+{
+    position: relative;
+    top: -30px;
+    right: -90px;
+
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+
+    background: url('../img/search.png');
+}
+.nav_right_search_button:hover
+{
+    background: url('../img/search_hover.png');
+}
+.nav_right_log
+{
+    line-height: 42px;
+
+    height: 42px;
+}
+.nav_right_log_list
+{
+    line-height: 42px;
+
+    height: 42px;
+}
+.nav_right_log_list > li
+{
+    line-height: 42px;
+
+    float: left;
+
+    width: 50px;
+    height: 42px;
+    margin: 0 2px;
+
+    cursor: pointer;
+    -webkit-transition: background-color .3s;
+         -o-transition: background-color .3s;
+            transition: background-color .3s;
+    text-align: center;
+}
+.nav_right_log_list > li:hover
+{
+    background-color: rgba(255,255,255,.4);
+}
+.nav_right_submit
+{
+    line-height: 42px;
+
+    width: 58px;
+    height: 48px;
+
+    cursor: pointer;
+    text-align: center;
+
+    opacity: 1;
+    color: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: -webkit-linear-gradient(#f35d8f, #d5517d);
+    background:      -o-linear-gradient(#f35d8f, #d5517d);
+    background:    -moz-linear-gradient(#f35d8f, #d5517d);
+    background:         linear-gradient(#f35d8f, #d5517d);
+}
+.nav_right_submit:hover
+{
+    background: -webkit-linear-gradient(#ff86ae, #e3779b);
+    background:      -o-linear-gradient(#ff86ae, #e3779b);
+    background:    -moz-linear-gradient(#ff86ae, #e3779b);
+    background:         linear-gradient(#ff86ae, #e3779b);
+}
+.main
+{
+    width: 1160px;
+    height: 4000px;
+    margin: 0 auto;
+}
+.main_nav
+{
+    width: 1160px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0 20px 0 0;
+}
+.main_nav_list
+{
+    line-height: 60px;
+
+    width: 800px;
+    height: 60px;
+
+    text-align: center;
+}
+.main_nav_list a
+{
+    font-weight: normal;
+
+    color: #000;
+}
+.main_nav_list > li
+{
+    line-height: 60px;
+
+    float: left;
+
+    width: 60px;
+
+    cursor: pointer;
+}
+.main_nav_list > li:hover a
+{
+    color: #00a1d6;
+}

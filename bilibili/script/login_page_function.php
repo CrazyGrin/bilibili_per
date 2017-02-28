@@ -1,6 +1,6 @@
 <?php 
 if (!empty($_POST)) {
-	
+
 	if (isset($_POST['user_account']) && isset($_POST['user_password'])){
 
 		$pdo = new PDO("mysql:host=localhost;dbname=bilibili","admin","admin");
@@ -21,20 +21,23 @@ if (!empty($_POST)) {
 				$_SESSION['user_account'] = $user_account;
 
 				echo $user_account;
+				setcookie("user_account",$user_account,time()+3600*24,"/");
+				setcookie("user_head_url","'img/default_head.png'",time()+3600*24,"/");
+
 				$pdo->exec("update user_info set user_session = 1 where user_account ='{$user_account}'");
 
 			}elseif($data['user_session'] < 0){
 
-				echo "所在用户没有登录权限";
+				echo "-1";
 
 			}elseif ($data['user_session'] > 0) {
 
-				echo "您已登录";
+				echo "1";
 
 			};
 		}else{
 
-			echo "用户名或密码错误";
+			echo "error";
 
 		};
 

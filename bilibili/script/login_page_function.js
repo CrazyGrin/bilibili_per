@@ -24,17 +24,26 @@ btn_log.addEventListener('click', function() {
             xml.onreadystatechange = function() {
                 if (xml.readyState === 4 && xml.status === 200) {
 
-                    if (xml.responseText == "登录成功") {
+                    if (xml.responseText == "-1") {
 
-                        setCookie("user_account", xml.responseText);
+                        alert("所在用户无登录权限");
+
+                    }else if(xml.responseText == "1"){  
+
+                        alert("您已登录");
                         self.location = '../index.php';
+
+                    }else if(xml.responseText == "error"){
+
+                        alert("用户名或密码错误");
 
                     }else{
 
                         self.location = '../index.php';
+
                     };
 
-                };
+                };  
 
             };
         } else {
@@ -59,18 +68,6 @@ nav_right_submit.addEventListener('click', function() {
 });
 
 //cookie封装(未研究)
-function setCookie(name, value) {
-
-    var Days = 30;
-
-    var exp = new Date();
-
-    exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
-
-    document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
-
-};
-
 function getCookie(name) {
 
     var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
