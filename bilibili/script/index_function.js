@@ -22,8 +22,7 @@ var a_tag = document.querySelector('.main_heat_video');
 //载入函数
 window.onload = function(){
 
-	user_account = getCookie("user_account");
-	viewChange();
+
 
 };
 
@@ -85,6 +84,11 @@ login_link.addEventListener('click',function(){
 	self.location = 'login.php';
 
 });
+nav_right_submit.addEventListener('click',function(){
+
+	if (true) {}
+
+});
 
 //根据用户登录状态改变页面
 function viewChange(){
@@ -132,5 +136,28 @@ function setCookie(name,value){
 	xml.open('POST', 'script/set_cookie.php', true);
 	xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	xml.send("name=" + name + "&value=" + value);
+
+};
+
+//请求服务器获取用户登录信息
+function getIsOnline(user_account){
+
+	var xml =  new XMLHttpRequest();
+
+	xml.open('POST', 'script/return_isonline.php', true);
+	xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xml.send("user_account=" + user_account);
+
+	xml.onreadystatechange = function(){
+		if (xml.readyState === 4 && xml.status === 200) {
+
+			if (xml.responseText<1) {
+
+			};
+
+			isonline = xml.responseText;
+
+		};
+	};
 
 };

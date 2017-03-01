@@ -24,7 +24,8 @@ if (!empty($_POST)) {
 	else{
 		echo "请填写表单";
 	};
-}else
-{
-	echo "未接收";
+}else{
+
+	echo "Get nothing";
+	
 };

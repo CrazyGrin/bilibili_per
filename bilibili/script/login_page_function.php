@@ -44,4 +44,8 @@ if (!empty($_POST)) {
 
 	};
 
+}else{
+
+	echo "Get nothing";
+	
 };
