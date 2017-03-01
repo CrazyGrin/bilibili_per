@@ -1,11 +1,3 @@
-//页面跳转DOM
-var login_link = document.querySelector('.login_link');
-var nav_right_submit = document.querySelector('.nav_right_submit');
-
-//轮播DOM
-var swing_list = document.querySelector('.swing_list');
-var loaction = 0;
-
 //用户状态检测及视图改变所需DOM
 var isonline = '';
 var nav_log_list = document.querySelector('.nav_right_log_list');
@@ -13,39 +5,20 @@ var nav_search = document.querySelector('.nav_right_search');
 var user_list = document.querySelector('.nav_right_user_list');
 
 var user_account = '';
-
-
-//所有a标签
-var a_tag = document.querySelector('.main_heat_video');
-
+var video_id = '';
 
 //载入函数
 window.onload = function(){
 
 	user_account = getCookie("user_account");
+	video_id = getCookie("video_id");
+	
 	viewChange();
 
+	
+
 };
 
-
-//轮播
-function swing(){
-
-	setInterval(function(){
-
-		if (loaction != 1320) {
-
-			loaction = loaction + 440;
-			swing_list.style.right = loaction + 'px';
-
-		}else{
-
-			loaction = 0;
-			swing_list.style.right = loaction;
-
-		};
-	},1000);
-};
 
 //cookie封装(未研究)
 function getCookie(name) {
@@ -78,14 +51,6 @@ function delCookie(name) {
     };
 };
 
-
-//页面跳转
-login_link.addEventListener('click',function(){
-
-	self.location = 'login.php';
-
-});
-
 //根据用户登录状态改变页面
 function viewChange(){
 
@@ -113,24 +78,4 @@ function viewChange(){
 		user_list.style.display = "none";
 		user_list.style.opacity = "0";
 	};
-};
-
-//遍历所有a标签
-a_tag.addEventListener('click',function(){
-	if (event.target.getAttribute('videoId') != '') {
-		setCookie("video_id",event.target.getAttribute('videoId'));
-	};
-});
-
-
-
-//访问服务器设置cookie
-function setCookie(name,value){
-
-	var xml =  new XMLHttpRequest();
-
-	xml.open('POST', 'script/set_cookie.php', true);
-	xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-	xml.send("name=" + name + "&value=" + value);
-
 };
