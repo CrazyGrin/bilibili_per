@@ -96,6 +96,18 @@ submit_button.addEventListener('click',function(){
 					"&video_url=" + getCookie("submit_video_url")
 					);
 
+				xml.onreadystatechange = function(){
+					if (xml.readyState === 4 && xml.status === 200) {
+						if (xml.responseText == '1') {
+							self.location = "../index.php";
+						}else if(xml.responseText == "-1"){
+							alert('文件已经存在');
+						}else{
+							alert('Unknown error');
+						};
+					};
+				};
+
 			}else{
 
 				alert('记得填写稿件详细信息');

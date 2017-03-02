@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>post_info</title>
-	<link rel="stylesheet" type="text/css" href="../style/post.css"></head>
+	<link rel="stylesheet" type="text/css" href="../style/post_file_info.css"></head>
 <body style="background: url(../img/post_back.jpg) no-repeat;">
 	<div class="nav_banner">
 		<div class="nav">

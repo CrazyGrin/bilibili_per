@@ -31,14 +31,22 @@
 				</ul>
 				<div class="nav_right_submit nav_right">投 稿</div>
 				<div class="nav_right_log nav_right">
-				<ul class="nav_right_user_list">
-					<div class="head_pic_banner"><img class="head_pic" src=<?php echo $_COOKIE["user_head_sub_url"] ?>>
-					</div>
-					<li><a href="user_info.php">消息</a></li>
-					<li><a href="user_info.php">动态</a></li>
-					<li><a href="user_info.php">收藏夹</a></li>
-					<li><a href="user_info.php">历史</a></li>
-				</ul>
+					<ul class="nav_right_user_list">
+						<div class="head_pic_banner">
+							<img class="head_pic" src=<?php echo $_COOKIE["user_head_sub_url"] ?>></div>
+						<li>
+							<a href="user_info.php">消息</a>
+						</li>
+						<li>
+							<a href="user_info.php">动态</a>
+						</li>
+						<li>
+							<a href="user_info.php">收藏夹</a>
+						</li>
+						<li>
+							<a href="user_info.php">历史</a>
+						</li>
+					</ul>
 					<ul class="nav_right_log_list">
 						<li>
 							<a class="login_link" href="login.php">登录</a>
@@ -56,64 +64,74 @@
 		</div>
 	</div>
 	<div class="main">
-	<div class="main_nav_banner">
-		<div class="main_nav">
-			<ul class="main_nav_list">
-				<li>
-					<a href="">首页</a>
-				</li>
-				<li>
-					<a href="">动画</a>
-				</li>
-				<li>
-					<a href="">番剧</a>
-				</li>
-				<li>
-					<a href="">音乐</a>
-				</li>
-				<li>
-					<a href="">舞蹈</a>
-				</li>
-				<li>
-					<a href="">游戏</a>
-				</li>
-				<li>
-					<a href="">科技</a>
-				</li>
-				<li>
-					<a href="">生活</a>
-				</li>
-				<li>
-					<a href="">鬼畜</a>
-				</li>
-				<li>
-					<a href="">时尚</a>
-				</li>
-				<li>
-					<a href="">广告</a>
-				</li>
-				<li>
-					<a href="">娱乐</a>
-				</li>
-				<li>
-					<a href="">影视</a>
-				</li>
-			</ul>
-		</div>
+		<div class="main_nav_banner">
+			<div class="main_nav">
+				<ul class="main_nav_list">
+					<li>
+						<a href="">首页</a>
+					</li>
+					<li>
+						<a href="">动画</a>
+					</li>
+					<li>
+						<a href="">番剧</a>
+					</li>
+					<li>
+						<a href="">音乐</a>
+					</li>
+					<li>
+						<a href="">舞蹈</a>
+					</li>
+					<li>
+						<a href="">游戏</a>
+					</li>
+					<li>
+						<a href="">科技</a>
+					</li>
+					<li>
+						<a href="">生活</a>
+					</li>
+					<li>
+						<a href="">鬼畜</a>
+					</li>
+					<li>
+						<a href="">时尚</a>
+					</li>
+					<li>
+						<a href="">广告</a>
+					</li>
+					<li>
+						<a href="">娱乐</a>
+					</li>
+					<li>
+						<a href="">影视</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div class="main_video_info_banner">
 			<div class="main_video_info">
 				<div class="video_info">
 					<p class="video_tittle">【布琪❤Bonbon❤离澈】Spending All My Time ♪ ( ´ ε ｀ )</p>
-					<!-- <p class="video_zone">主页 > < ? php echo0 $_COOKIE['video_zone'] ? ></p> -->
-					<p class="video_zone">主页 > 生活 </p><p class="video_date">2017-3-1 00:00</p>
-					<br><br>
+					<!-- <p class="video_zone">
+					主页 >
+					< ? php echo0 $_COOKIE['video_zone'] ? ></p>
+					-->
+					<p class="video_zone">主页 > 生活</p>
+					<p class="video_date">2017-3-1 00:00</p>
+					<br>
+					<br>
 					<ul class="video_play_info">
-						<li><img src="../img/play_times.png" style="float: left;margin-right: 10px;">8.3W</li>
-						<li><img src="../img/video_danmu.png" style="float: left;margin-right: 10px;">2987</li>
-						<li style="width: 150px;border-right: 1px solid #e5e9ef;"><img src="../img/video_board.png" style="float: left;margin-right: 10px;">全站最高排名1</li>
-						<li style="width: 120px;"><img src="../img/video_coin.png" style="float: left;margin-right: 10px;">硬币1000</li>
-						<li><img src="../img/video_like.png" style="float: left;margin-right: 10px;">收藏1W</li>
+						<li>
+							<img src="../img/play_times.png" style="float: left;margin-right: 10px;">8.3W</li>
+						<li>
+							<img src="../img/video_danmu.png" style="float: left;margin-right: 10px;">2987</li>
+						<li style="width: 150px;border-right: 1px solid #e5e9ef;">
+							<img src="../img/video_board.png" style="float: left;margin-right: 10px;">全站最高排名1</li>
+						<li style="width: 120px;">
+							<img src="../img/video_coin.png" style="float: left;margin-right: 10px;">硬币1000</li>
+						<li>
+							<img src="../img/video_like.png" style="float: left;margin-right: 10px;">收藏1W</li>
 					</ul>
 				</div>
 				<div class="user_info">
@@ -124,19 +142,21 @@
 					<div class="follow_button">+ 关注</div>
 					<div class="charge_button">充电</div>
 				</div>
-				<div class="adv"><img src="../img/adv1.png"></div>
+				<div class="adv">
+					<img src="../img/adv1.png"></div>
 			</div>
 		</div>
-		<br><br>
+		<br>
+		<br>
 		<div class="main_video_play">
 			<div class="main_video">
 				<video width="860" height="647" style="background-color: black;" controls>
-  					<source src="../video/demo.mp4" type="video/mp4">
-				</video>
+					<source src="../video/demo.mp4" type="video/mp4"></video>
 			</div>
 			<div class="main_danmu">
 				<div class="main_danmu_info">
-					<span style="font-size: 18px;color: black;font-weight: 700;">1</span>人正在看 , 条弹幕
+					<span style="font-size: 18px;color: black;font-weight: 700;">1</span>
+					人正在看 , 条弹幕
 				</div>
 				<div class="main_danmu_content"></div>
 			</div>
@@ -153,20 +173,55 @@
 				</div>
 			</div>
 		</div>
-		<br><br>
-		<div class="main_function"></div>
-		<br><br>
-	</div>
-	
-	<div class="footer">
-	<div class="footer_banner">
-	<div class="footer_video_tag"></div>
-	<div class="footer_video_adv"></div>
-	<div class="footer_video_info"></div>
-	<div class="footer_video_coment"></div>
-	</div>
-	</div>
+		<br>
+		<br>
+		<div class="main_function">
+			<ul class="main_function_list">
+				<li><img src="../img/link.png"><p class="function_name">分享</p><p class="function_data">593</p></li>
+				<li><img src="../img/like_video.png"><p class="function_name">收藏</p><p class="function_data">32347</p></li>
+				<li><img src="../img/app.png"><p class="function_name">用手机看</p><p class="function_data">离线看更方便</p></li>
+				<li><img src="../img/icon.png"><p class="function_name">硬币</p><p class="function_data">3609</p></li>
+			</ul>
+			<img src="../img/charge.png" style="float: right;">
+		</div>
+		<br>
+		<br></div>
 
+	<div class="footer">
+		<div class="footer_banner">
+			<div class="footer_left_banner">
+				<div class="footer_video_tag">
+					<ul class="video_tag_list">
+						<li>手机游戏</li>
+						<li>命运冠位指定</li>
+						<li>Fate⁄Grand Order</li>
+						<li>攻略向视频</li>
+						<li>震惊部门</li>
+						<li>首次投稿</li>
+						<li>有毒</li>
+						<li>循环</li>
+						<li>攻略</li>
+						<li>动漫</li>
+						<li class="add_tag"></li>
+					</ul>
+				</div>
+				<div class="footer_video_brief">
+					<p class="video_brief">
+						网易云ID：Toch_Her
+						<br>我是一个用户demo , 233333333333</p>
+				</div>
+				<div class="footer_video_coment">
+				<img class="head_pic_comment" src=<?php echo $_COOKIE["user_head_sub_url"] ?>>
+				<div class="comment_submit_button">发表评论</div>
+					<textarea class="comment_input" type="text" name="comment_content" placeholder="请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。"></textarea>
+					<div class="show_comment_content"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_right_banner">
+			<div class="charge_board"></div>
+		</div>
+	</div>
 
 	<div class="bottom">
 		<div class="bottom_wrap">
@@ -213,16 +268,21 @@
 					<p>网络文化经营许可证：沪网文[2013]0480-056号</p>
 					<p>信息网络传播视听节目许可证：0910417</p>
 				</div>
-				<div class="bottom_info_block"><p>互联网ICP备案：沪ICP备13002172号-3</p>
-				<p>沪ICP证：沪B2-20100043</p></div>
+				<div class="bottom_info_block">
+					<p>互联网ICP备案：沪ICP备13002172号-3</p>
+					<p>沪ICP证：沪B2-20100043</p>
+				</div>
 				<div class="bottom_info_block" style="margin-left: 50px;">
 					<p>违法不良信息举报邮箱：help@bilibili.com</p>
 					<p>违法不良信息举报电话：4000233233 转 3</p>
-					<p><a href="http://www.shjbzx.cn/" style="font-size: 10px;">上海互联网举报中心</a></p>
+					<p>
+						<a href="http://www.shjbzx.cn/" style="font-size: 10px;">上海互联网举报中心</a>
+					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script src="../script/video_play_function.js"></script>
+	<script src="../script/cookie_idus.js"></script>
 </body>
 </html>

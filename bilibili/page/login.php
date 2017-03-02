@@ -117,5 +117,6 @@
 		</div>
 	</div>
 	<script src="../script/login_page_function.js"></script>
+	<script src="../script/cookie_idus.js"></script>
 </body>
 </html>
