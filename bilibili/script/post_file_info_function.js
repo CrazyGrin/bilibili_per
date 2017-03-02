@@ -1,25 +1,31 @@
+//view所需DOM
 var checkbox_trigger = document.querySelector('.main_post_video_class');
 var personal_checkbox = document.querySelector('#personal');
 var notpersonal_checkbox = document.querySelector('#notpersonal');
 
+//投稿类型
 var personal_ischecked = 0;
 var notpersonal_ischecked = 0;
 
-// var chose_button = document.querySelector('.main_chose_button');
-// var chose_file =  document.querySelector('.chose_file');
-
+//分类item
 var video_zone = document.querySelector('.main_post_video_zone');
 var zone_item = document.querySelectorAll('.zone_item');
 
+//提交按钮
 var submit_button = document.querySelector('.main_submit_button');
 
 //发送数据
 var video_type = '';
 var video_tittle = document.querySelector('.video_title');
 var video_brief = document.querySelector('.video_brief');
+var notpersonal_decoration = document.querySelector('.notpersonal_decoration');
 var video_zone_content = '';
-//表单提交按钮
-// var submit_file = document.querySelector('.submit_file');
+
+//載入
+window.onload = function(){
+	alert("demo");
+}
+
 
 //zone视图
 video_zone.addEventListener('click',function(){
@@ -69,14 +75,10 @@ checkbox_trigger.addEventListener('click',function(){
 
 });
 
-//选择和提交稿件
-// chose_button.addEventListener('click',function(){
-// 	chose_file.click();
-// });
-
+//Bilibili0
 //提交验证
 submit_button.addEventListener('click',function(){
-		if (personal_ischecked == 1 || notpersonal_checkbox == 1) {
+		if (video_type != '') {
 
 			if (video_zone_content != '') {
 
@@ -84,9 +86,15 @@ submit_button.addEventListener('click',function(){
 
 				var xml = new XMLHttpRequest();
 
-				xml.open('POST', 'post_file_info.php', true);
+				xml.open('POST', '../script/recieve_file_info_function.php', true);
 				xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-				xml.send('video_tittle=' + video_type + video_tittle.innerHTML + '&video_zone=' + video_zone_content + '&video_brief' + video_brief.innerHTML);
+				xml.send(
+					'video_tittle=' + video_type + video_tittle.value +
+					'&video_zone=' + video_zone_content +
+					'&video_brief=' + video_brief.value + notpersonal_decoration.value +
+					"&user_account=" + getCookie("user_account") +
+					"&video_url=" + getCookie("submit_video_url")
+					);
 
 			}else{
 
@@ -104,3 +112,35 @@ submit_button.addEventListener('click',function(){
 
 	};
 });
+
+
+//cookie封装(未研究)
+function getCookie(name) {
+
+    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+
+    if (arr = document.cookie.match(reg)) {
+
+        return unescape(arr[2]);
+
+    } else {
+
+        return null;
+    };
+
+};
+
+function delCookie(name) {
+
+    var exp = new Date();
+
+    exp.setTime(exp.getTime() - 1);
+
+    var cval = getCookie(name);
+
+    if (cval != null) {
+
+        document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+
+    };
+};

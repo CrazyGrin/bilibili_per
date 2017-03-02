@@ -48,7 +48,8 @@ img
 {
     cursor: pointer;
 }
-body{
+body
+{
     background-color: #f6f9fa;
 }
 .top,
@@ -99,6 +100,10 @@ body{
     width: 1160px;
     height: 42px;
     margin: 0 auto;
+}
+.nav a
+{
+    font-size: 12px;
 }
 .icon
 {
@@ -185,27 +190,33 @@ body{
 }
 .nav_right_user_list
 {
-    opacity: 0;
     line-height: 42px;
+
     height: 42px;
+
+    opacity: 0;
 }
 .head_pic_banner
 {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    float: left;
+
     width: 42px;
     height: 42px;
-    float: left;
-    position: relative;
+
     -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
-    left: 0;
-    top: 0;
+         -o-transition: all .2s;
+            transition: all .2s;
 }
 .head_pic_banner:hover
 {
-    width: 60px;
-    left: 9px;
     top: 10px;
+    left: 9px;
+
+    width: 60px;
 }
 .head_pic_banner:hover img.head_pic
 {
@@ -214,14 +225,17 @@ body{
 }
 img.head_pic
 {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
     position: relative;
     left: 0;
+
+    width: 42px;
+    height: 42px;
+
+    -webkit-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+
+    border-radius: 50%;
 }
 .nav_right_user_list > li
 {
@@ -347,7 +361,7 @@ img.head_pic
 .main_video_info_banner
 {
     width: 100%;
-    height: 152px;
+    height: 252px;
 
     border-top: 1px solid #e5e9ef;
     border-bottom: 1px solid #e5e9ef;
@@ -356,6 +370,161 @@ img.head_pic
 .main_video_info
 {
     width: 1160px;
+    height: 252px;
+    margin: 0 auto;
+}
+.video_info
+{
+    float: left;
+
+    width: 700px;
+    height: 152px;
+}
+p.video_tittle
+{
+    font-size: 20px;
+    font-weight: normal;
+
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+p.video_zone
+{
+    font-size: 12px;
+
+    float: left;
+
+    margin: 10px 100px 10px 0;
+    padding: 0;
+
+    opacity: .5;
+}
+p.video_date
+{
+    font-size: 12px;
+
+    float: left;
+
+    margin: 10px 0 10px 0;
+    padding: 0;
+
+    opacity: .5;
+}
+.video_play_info > li
+{
+    line-height: 26px;
+
+    float: left;
+
+    width: 90px;
+    height: 26px;
+    margin-right: 20px;
+}
+.user_info
+{
+    float: right;
+
+    width: 315px;
+    height: 152px;
+    padding-top: 20px;
+    padding-left: 90px;
+}
+p.user_name
+{
+    font-size: 15px;
+
+    margin: 5px 0 5px 0;
+
+    color: #f35d8f;
+}
+p.user_brief
+{
+    font-size: 12px;
+    line-height: 18px;
+
+    margin: 0;
+}
+p.video_count
+{
+    font-size: 12px;
+    line-height: 18px;
+
+    float: left;
+
+    width: 100px;
+    margin: 5px 0 15px 0;
+
+    opacity: .5;
+}
+p.user_fan
+{
+    font-size: 12px;
+    line-height: 18px;
+
+    float: left;
+
+    width: 100px;
+    margin: 5px 0 15px 0;
+
+    opacity: .5;
+}
+.follow_button
+{
+    line-height: 24px;
+
+    float: left;
+
+    width: 140px;
+    height: 24px;
+
+    cursor: pointer;
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+    text-align: center;
+
+    color: #fff;
+    border-radius: 4px;
+    background-color: #00a1d6;
+}
+.follow_button:hover
+{
+    background-color: #00b5e5;
+}
+.charge_button
+{
+    line-height: 22px;
+
+    float: right;
+
+    width: 70px;
+    height: 24px;
+
+    cursor: pointer;
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+    text-align: center;
+
+    color: #f35d8f;
+    border: 1px solid #f35d8f;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.charge_button:hover
+{
+    color: #fff;
+    background-color: #f35d8f;
+}
+.adv
+{
+    overflow: hidden;
+
+    width: 1160px;
+    height: 88px;
+    padding: 10px 0 10px 0;
 }
 .main_video_play
 {
@@ -368,144 +537,175 @@ img.head_pic
 }
 .main_video
 {
+    float: left;
+
     width: 860px;
     height: 647px;
-    
-    float: left;
+
     background-color: gray;
 }
-.main_danmu_send_input{
+.main_danmu_send_input
+{
+    float: right;
+
     width: 780px;
     height: 40px;
-    float: right;
 }
 .main_danmu
 {
+    float: right;
+
     width: 300px;
     height: 686px;
+
     background-color: #fff;
-    float: right;
 }
 .main_danmu_info
 {
     line-height: 60px;
-    padding-left: 20px;
+
     width: 300px;
     height: 60px;
+    padding-left: 20px;
+
     color: gray;
     border-bottom: 1px solid #e5e9ef;
 }
-.main_danmu_content{
+.main_danmu_content
+{
     width: 300px;
-    height: 
 }
 .main_danmu_content
 {
     width: 300px;
     height: 626px;
+
     border-left: 1px solid #e5e9ef;
 }
 .main_send_danmu
 {
-    width: 860px;
     float: left;
+
+    width: 860px;
     height: 40px;
-    background-color: #fff;
+
     border-top: 1px solid #e5e9ef;
     border-bottom: 1px solid #e5e9ef;
+    background-color: #fff;
 }
 .main_danmu_send_setting
 {
+    float: left;
+
     width: 80px;
     height: 40px;
-    float: left;
 }
-.danmu_input{
+.danmu_input
+{
     width: 780px;
     height: 40px;
-    opacity: .5;
     padding: 10px;
+
+    opacity: .5;
     border: 1px solid rgba(255,255,255,0);
-    border-bottom: 1px solid #e5e9ef;
     border-right: 1px solid #e5e9ef;
+    border-bottom: 1px solid #e5e9ef;
     background-color: #f8f8f8;
 }
-.send_danmu_button{
-    width: 66px;
-    height: 30px;
+.send_danmu_button
+{
+    font-weight: 500;
     line-height: 30px;
+
     position: relative;
     top: -35px;
     left: 700px;
-    border-radius: 5px;
-    background-color: #00a1d6;
+
+    width: 66px;
+    height: 30px;
+
     cursor: pointer;
     text-align: center;
+
     color: #fff;
-    font-weight: 500;
+    border-radius: 5px;
+    background-color: #00a1d6;
 }
-.send_danmu_button:hover{
+.send_danmu_button:hover
+{
     background-color: #00b5e5;
 }
 .danmu_send_setting_list
 {
+    float: left;
+
     width: 80px;
     height: 40px;
-    float: left;
 }
 .danmu_send_setting_list > li
 {
+    float: left;
+
     width: 40px;
     height: 40px;
-    float: left;
 }
 .main_function
 {
     width: 1160px;
     height: 82px;
+    margin: 0 auto;
+
     border: 1px solid #e5e9ef;
     border-radius: 5px;
     background-color: #fff;
-    margin: 0 auto;
 }
 .footer
 {
-    min-height: 1000px;
     width: 100%;
+    min-height: 1000px;
+
     background-color: #fff;
 }
 .footer_banner
 {
     width: 1160px;
     margin: 0 auto;
+
     background-color: #fff;
 }
 .footer_video_tag
 {
     float: left;
+
     width: 870px;
     height: 140px;
+
     background-color: gray;
 }
 .footer_video_info
 {
     float: left;
+
     width: 870px;
     height: 180px;
+
     background-color: #aaa;
 }
 .footer_video_adv
 {
+    float: right;
+
     width: 260px;
     height: 232px;
-    float: right;
+
     background-color: yellow;
 }
-.footer_video_coment{
-    width: 870px;
-    min-height: 600px;
+.footer_video_coment
+{
     float: left;
 
+    width: 870px;
+    min-height: 600px;
 }
 
 

@@ -7,7 +7,7 @@ var swing_list = document.querySelector('.swing_list');
 var loaction = 0;
 
 //用户状态检测及视图改变所需DOM
-var isonline = '';
+var isonline = 0;
 var nav_log_list = document.querySelector('.nav_right_log_list');
 var nav_search = document.querySelector('.nav_right_search');
 var user_list = document.querySelector('.nav_right_user_list');
@@ -22,7 +22,9 @@ var a_tag = document.querySelector('.main_heat_video');
 //载入函数
 window.onload = function(){
 
-
+	user_account = getCookie("user_account");
+	viewChange();
+	getIsOnline(user_account);
 
 };
 
@@ -86,7 +88,11 @@ login_link.addEventListener('click',function(){
 });
 nav_right_submit.addEventListener('click',function(){
 
-	if (true) {}
+	if (isonline == 1) {
+		self.location = 'page/post_file.php'
+	}else{
+		alert("请先登录");
+	}
 
 });
 
@@ -152,6 +158,7 @@ function getIsOnline(user_account){
 		if (xml.readyState === 4 && xml.status === 200) {
 
 			if (xml.responseText<1) {
+				//清除cookie(未完成)
 
 			};
 

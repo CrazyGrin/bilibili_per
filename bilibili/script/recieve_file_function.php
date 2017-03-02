@@ -1,5 +1,6 @@
 <?php
-	$user_account = $_SESSION['user_account  m '];
+	$user_account = $_SESSION['user_account'];
+	$submit_video_url = "../video/".$_FILES["file"]["name"];
 
 	if($_FILES["file"]["type"] == "video/mp4" || $_FILES["file"]["type"] == "audio/mp4"){
 
@@ -17,6 +18,7 @@
 
 				move_uploaded_file($_FILES["file"]["tmp_name"],
 					"../video/".$_FILES["file"]["name"]);
+				setcookie("submit_video_url",$submit_video_url,time()+3600*24,"/");
                 header('Location: ../page/post_file_info.php');
 
 			};

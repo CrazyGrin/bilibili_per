@@ -34,10 +34,10 @@
 				<ul class="nav_right_user_list">
 					<div class="head_pic_banner"><img class="head_pic" src=<?php echo $_COOKIE["user_head_sub_url"] ?>>
 					</div>
-					<li><a href="">消息</a></li>
-					<li><a href="">动态</a></li>
-					<li><a href="">收藏夹</a></li>
-					<li><a href="">历史</a></li>
+					<li><a href="user_info.php">消息</a></li>
+					<li><a href="user_info.php">动态</a></li>
+					<li><a href="user_info.php">收藏夹</a></li>
+					<li><a href="user_info.php">历史</a></li>
 				</ul>
 					<ul class="nav_right_log_list">
 						<li>
@@ -102,7 +102,30 @@
 		</div>
 		</div>
 		<div class="main_video_info_banner">
-			<div class="main_video_info"></div>
+			<div class="main_video_info">
+				<div class="video_info">
+					<p class="video_tittle">【布琪❤Bonbon❤离澈】Spending All My Time ♪ ( ´ ε ｀ )</p>
+					<!-- <p class="video_zone">主页 > < ? php echo0 $_COOKIE['video_zone'] ? ></p> -->
+					<p class="video_zone">主页 > 生活 </p><p class="video_date">2017-3-1 00:00</p>
+					<br><br>
+					<ul class="video_play_info">
+						<li><img src="../img/play_times.png" style="float: left;margin-right: 10px;">8.3W</li>
+						<li><img src="../img/video_danmu.png" style="float: left;margin-right: 10px;">2987</li>
+						<li style="width: 150px;border-right: 1px solid #e5e9ef;"><img src="../img/video_board.png" style="float: left;margin-right: 10px;">全站最高排名1</li>
+						<li style="width: 120px;"><img src="../img/video_coin.png" style="float: left;margin-right: 10px;">硬币1000</li>
+						<li><img src="../img/video_like.png" style="float: left;margin-right: 10px;">收藏1W</li>
+					</ul>
+				</div>
+				<div class="user_info">
+					<p class="user_name">我是韦德戈林</p>
+					<p class="user_brief">网易云ID：Toch_Her , 我是一个用户demo , 23333333</p>
+					<p class="video_count">投稿 : 1W</p>
+					<p class="user_fan">粉丝 : 123456789</p>
+					<div class="follow_button">+ 关注</div>
+					<div class="charge_button">充电</div>
+				</div>
+				<div class="adv"><img src="../img/adv1.png"></div>
+			</div>
 		</div>
 		<br><br>
 		<div class="main_video_play">

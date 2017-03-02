@@ -174,6 +174,6 @@
 <!-- 	<form class="post_form" enctype="multipart/form-data" method="post" name="file_info" action="post_success.php">
 		<input class="chose_file" accept="audio/mp4,video/mp4 " type="file" name="file">
 		<input class="submit_file" type="submit" name="submit" style="display: none;"></form> -->
-<!-- 	<script src="../script/post_page_function.js"></script> -->
+	<script src="../script/post_file_info_function.js"></script>
 </body>
 </html>
