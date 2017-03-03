@@ -34,9 +34,16 @@
 						<div class="head_pic_banner">
 							<div class="nav_user_info_board">
 								<div class="nav_user_info"></div>
-								<div class="nav_logout_button"></div>
+								<div class="nav_logout_button">退出</div>
 							</div>
-							<img class="head_pic" src=<?php echo $_COOKIE["user_head_url"] ?>></div>
+							<img class="head_pic" src=<?php 
+							if (isset($_COOKIE["user_head_url"])) {
+								echo $_COOKIE["user_head_url"];
+							}else
+							{
+								echo "";
+							};
+							?>></div>
 						<li>
 							<a href="page/user_info.php">消息</a>
 						</li>

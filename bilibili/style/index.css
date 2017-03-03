@@ -349,8 +349,13 @@ img.head_pic
 {
     width: 262px;
     height: 30px;
+    cursor: pointer;
 
     background-color: #f4f5f7;
+    text-align: right;
+    line-height: 30px;
+    padding-right: 10px;
+    color: rgba(0,0,0,.5);
 }
 .nav_right_user_list > li
 {

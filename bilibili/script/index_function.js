@@ -18,6 +18,8 @@ var user_account = '';
 //所有a标签
 var a_tag = document.querySelector('.main_heat_video');
 
+//退出按钮
+var logout_button = document.querySelector('.nav_logout_button');
 
 //载入函数
 window.onload = function(){
@@ -68,7 +70,7 @@ nav_right_submit.addEventListener('click',function(){
 //根据用户登录状态改变页面
 function viewChange(){
 
-	if (user_account != '') {
+	if (user_account != null) {
 
 		isonline = 1;
 
@@ -124,3 +126,15 @@ function getIsOnline(user_account){
 	};
 
 };
+
+//退出登录
+logout_button.addEventListener('click',function(){
+	var xml = new XMLHttpRequest();
+
+	xml.open('POST', 'script/logout_function.php', true);
+	xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xml.send("user_account=" + getCookie("user_account"));
+
+	location.reload(true);
+	loaction = 0;
+});

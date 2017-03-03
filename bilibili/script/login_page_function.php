@@ -29,10 +29,16 @@ if (!empty($_POST)) {
 
 			}elseif($data['user_session'] < 0){
 
+				setcookie("user_account",'',time()+3600*24,"/");
+				setcookie("user_head_url",'',time()+3600*24,"/");
+				setcookie("user_head_sub_url",'',time()+3600*24,"/");
 				echo "-1";
 
 			}elseif ($data['user_session'] > 0) {
-
+				
+				setcookie("user_account",'',time()+3600*24,"/");
+				setcookie("user_head_url",'',time()+3600*24,"/");
+				setcookie("user_head_sub_url",'',time()+3600*24,"/");
 				echo "1";
 
 			};
