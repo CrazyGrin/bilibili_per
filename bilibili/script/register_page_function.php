@@ -19,6 +19,12 @@ if (!empty($_POST)) {
 		else{
 			$pdo->exec("insert into user_info (user_account,user_password,user_phone) values ('{$user_account}','{$user_password}','{$phone}')");
 			echo "注册成功";
+
+			$pdo->exec("update user_info set user_session = 1 where user_account ='{$user_account}'");
+			
+			setcookie("user_account",$user_account,time()+3600*24,"/");
+			setcookie("user_head_url","img/default_head.png",time()+3600*24,"/");
+			setcookie("user_head_sub_url","../img/default_head.png",time()+3600*24,"/");
 		};
 	}
 	else{

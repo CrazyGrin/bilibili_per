@@ -54,6 +54,25 @@ body
 {
     background-color: #f6f9fa;
 }
+::-webkit-scrollbar
+{
+    width: 8px;
+
+    border: 2px solid #e1e5ea;
+    border-radius: 5px;
+    background-color: #e1e5ea;
+}
+::-webkit-scrollbar-thumb
+{
+    border: 10px solid #c3cad4;
+    border-radius: 4px;
+    background-color: #aab1bc;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    border: 4px solid #aab1bc;
+    background-color: #aab1bc;
+}
 .top,
 .main,
 .bottom
@@ -152,6 +171,8 @@ body
     right: 50px;
 
     height: 32px;
+
+    opacity: 0;
 }
 .nav_right_search > input
 {
@@ -225,6 +246,12 @@ body
     width: 60px;
     height: 60px;
 }
+.head_pic_banner:hover .nav_user_info_board
+{
+    top: 32px;
+
+    height: 275px;
+}
 img.head_pic
 {
     position: relative;
@@ -233,11 +260,43 @@ img.head_pic
     width: 42px;
     height: 42px;
 
-    -webkit-transition: all .2s;
-         -o-transition: all .2s;
-            transition: all .2s;
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
 
     border-radius: 50%;
+}
+.nav_user_info_board
+{
+    position: absolute;
+    top: 42px;
+    left: -100px;
+
+    overflow: hidden;
+
+    width: 262px;
+    height: 0;
+
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 0 8px 3px rgba(0,0,0,.1);
+}
+.nav_user_info
+{
+    width: 262px;
+    height: 244px;
+}
+.nav_logout_button
+{
+    width: 262px;
+    height: 30px;
+
+    background-color: #f4f5f7;
 }
 .nav_right_user_list > li
 {
@@ -575,14 +634,82 @@ p.user_fan
 }
 .main_danmu_content
 {
-    width: 300px;
-}
-.main_danmu_content
-{
+    position: relative;
+
     width: 300px;
     height: 626px;
 
     border-left: 1px solid #e5e9ef;
+}
+.main_danmu_tittle > li
+{
+    font-size: 12px;
+    line-height: 30px;
+
+    overflow: hidden;
+
+    width: 300px;
+    height: 30px;
+
+    opacity: .5;
+}
+.main_danmu_list
+{
+    position: relative;
+
+    overflow: auto;
+    overflow-x: hidden;
+
+    width: 300px;
+    height: 596px;
+}
+.main_danmu_list > li
+{
+    font-size: 12px;
+    line-height: 30px;
+
+    overflow: hidden;
+
+    width: 300px;
+    height: 30px;
+
+    opacity: .5;
+}
+.main_danmu_list > li:hover
+{
+    background-color: #f6f9fa;
+}
+span.time
+{
+    display: inline-block;
+
+    width: 60px;
+    height: 30px;
+    padding-left: 30px;
+}
+.main_danmu_history
+{
+    line-height: 40px;
+
+    position: absolute;
+    bottom: 0;
+
+    width: 300px;
+    height: 40px;
+
+    cursor: pointer;
+    -webkit-transition: all .1s;
+         -o-transition: all .1s;
+            transition: all .1s;
+    text-align: center;
+
+    color: rgba(0,0,0,.4);
+    border-top: 1px solid #e5e9ef;
+    background-color: #fff;
+}
+.main_danmu_history:hover
+{
+    color: rgba(0,0,0,1);
 }
 .main_send_danmu
 {
@@ -874,6 +1001,30 @@ textarea.comment_input:focus
     min-height: 500px;
 
     border-top: 1px solid #e5e9ef;
+}
+
+.footer_right_banner
+{
+    float: right;
+
+    width: 260px;
+    height: 600px;
+
+padding-top: 30px;
+}
+.footer_right_banner span
+{
+    width: 260px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    position: relative;
+}
+.small_adv_banner
+{
+    width: 260px;
+    height: 232px;
+    margin-top: 30px;
 }
 
 

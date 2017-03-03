@@ -33,6 +33,10 @@
 				<div class="nav_right_log nav_right">
 					<ul class="nav_right_user_list">
 						<div class="head_pic_banner">
+							<div class="nav_user_info_board">
+								<div class="nav_user_info"></div>
+								<div class="nav_logout_button"></div>
+							</div>
 							<img class="head_pic" src=<?php echo $_COOKIE["user_head_sub_url"] ?>></div>
 						<li>
 							<a href="user_info.php">消息</a>
@@ -150,7 +154,7 @@
 		<br>
 		<div class="main_video_play">
 			<div class="main_video">
-				<video width="860" height="647" style="background-color: black;" controls>
+				<video width="860" height="647" style="background-color: black;" controls >
 					<source src="../video/demo.mp4" type="video/mp4"></video>
 			</div>
 			<div class="main_danmu">
@@ -158,7 +162,163 @@
 					<span style="font-size: 18px;color: black;font-weight: 700;">1</span>
 					人正在看 , 条弹幕
 				</div>
-				<div class="main_danmu_content"></div>
+				<div class="main_danmu_content">
+					<ul class="main_danmu_tittle">
+						<li>
+							<span class="time">时间</span>
+							弹幕内容
+						</li>
+					</ul>
+					<ul class="main_danmu_list">
+						<li>
+							<span class="time">00:00</span>
+							第一!
+						</li>
+						<li>
+							<span class="time">00:01</span>
+							好厉害啊
+						</li>
+						<li>
+							<span class="time">00:10</span>
+							一起观看的177个小伙伴们,你们好啊
+						</li>
+						<li>
+							<span class="time">00:28</span>
+							bilibili[]~(￣▽￣)~
+						</li>
+						<li>
+							<span class="time">00:29</span>
+							呃(⊙o⊙)…
+						</li>
+						<li>
+							<span class="time">00:46</span>
+							你们吼啊
+						</li>
+						<li>
+							<span class="time">00:00</span>
+							第一!
+						</li>
+						<li>
+							<span class="time">00:01</span>
+							好厉害啊
+						</li>
+						<li>
+							<span class="time">00:10</span>
+							一起观看的177个小伙伴们,你们好啊
+						</li>
+						<li>
+							<span class="time">00:28</span>
+							bilibili[]~(￣▽￣)~
+						</li>
+						<li>
+							<span class="time">00:29</span>
+							呃(⊙o⊙)…
+						</li>
+						<li>
+							<span class="time">00:46</span>
+							你们吼啊
+						</li>
+						<li>
+							<span class="time">00:00</span>
+							第一!
+						</li>
+						<li>
+							<span class="time">00:01</span>
+							好厉害啊
+						</li>
+						<li>
+							<span class="time">00:10</span>
+							一起观看的177个小伙伴们,你们好啊
+						</li>
+						<li>
+							<span class="time">00:28</span>
+							bilibili[]~(￣▽￣)~
+						</li>
+						<li>
+							<span class="time">00:29</span>
+							呃(⊙o⊙)…
+						</li>
+						<li>
+							<span class="time">00:46</span>
+							你们吼啊
+						</li>
+
+						<li>
+							<span class="time">00:00</span>
+							第一!
+						</li>
+						<li>
+							<span class="time">00:01</span>
+							好厉害啊
+						</li>
+						<li>
+							<span class="time">00:10</span>
+							一起观看的177个小伙伴们,你们好啊
+						</li>
+						<li>
+							<span class="time">00:28</span>
+							bilibili[]~(￣▽￣)~
+						</li>
+						<li>
+							<span class="time">00:29</span>
+							呃(⊙o⊙)…
+						</li>
+						<li>
+							<span class="time">00:46</span>
+							你们吼啊
+						</li>
+						<li>
+							<span class="time">00:00</span>
+							第一!
+						</li>
+						<li>
+							<span class="time">00:01</span>
+							好厉害啊
+						</li>
+						<li>
+							<span class="time">00:10</span>
+							一起观看的177个小伙伴们,你们好啊
+						</li>
+						<li>
+							<span class="time">00:28</span>
+							bilibili[]~(￣▽￣)~
+						</li>
+						<li>
+							<span class="time">00:29</span>
+							呃(⊙o⊙)…
+						</li>
+						<li>
+							<span class="time">00:46</span>
+							你们吼啊
+						</li>
+
+						<li>
+							<span class="time">00:00</span>
+							第一!
+						</li>
+						<li>
+							<span class="time">00:01</span>
+							好厉害啊
+						</li>
+						<li>
+							<span class="time">00:10</span>
+							一起观看的177个小伙伴们,你们好啊
+						</li>
+						<li>
+							<span class="time">00:28</span>
+							bilibili[]~(￣▽￣)~
+						</li>
+						<li>
+							<span class="time">00:29</span>
+							呃(⊙o⊙)…
+						</li>
+						<li>
+							<span class="time">00:46</span>
+							你们吼啊
+						</li>
+					</ul>
+					<div class="main_danmu_history">历史弹幕</div>
+				</div>
 			</div>
 			<div class="main_send_danmu">
 				<div class="main_danmu_send_setting">
@@ -177,13 +337,28 @@
 		<br>
 		<div class="main_function">
 			<ul class="main_function_list">
-				<li><img src="../img/link.png"><p class="function_name">分享</p><p class="function_data">593</p></li>
-				<li><img src="../img/like_video.png"><p class="function_name">收藏</p><p class="function_data">32347</p></li>
-				<li><img src="../img/app.png"><p class="function_name">用手机看</p><p class="function_data">离线看更方便</p></li>
-				<li><img src="../img/icon.png"><p class="function_name">硬币</p><p class="function_data">3609</p></li>
+				<li>
+					<img src="../img/link.png">
+					<p class="function_name">分享</p>
+					<p class="function_data">593</p>
+				</li>
+				<li>
+					<img src="../img/like_video.png">
+					<p class="function_name">收藏</p>
+					<p class="function_data">32347</p>
+				</li>
+				<li>
+					<img src="../img/app.png">
+					<p class="function_name">用手机看</p>
+					<p class="function_data">离线看更方便</p>
+				</li>
+				<li>
+					<img src="../img/icon.png">
+					<p class="function_name">硬币</p>
+					<p class="function_data">3609</p>
+				</li>
 			</ul>
-			<img src="../img/charge.png" style="float: right;">
-		</div>
+			<img src="../img/charge.png" style="float: right;"></div>
 		<br>
 		<br></div>
 
@@ -211,15 +386,18 @@
 						<br>我是一个用户demo , 233333333333</p>
 				</div>
 				<div class="footer_video_coment">
-				<img class="head_pic_comment" src=<?php echo $_COOKIE["user_head_sub_url"] ?>>
-				<div class="comment_submit_button">发表评论</div>
+					<img class="head_pic_comment" src=<?php echo $_COOKIE["user_head_sub_url"] ?>
+					>
+					<div class="comment_submit_button">发表评论</div>
 					<textarea class="comment_input" type="text" name="comment_content" placeholder="请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。"></textarea>
 					<div class="show_comment_content"></div>
 				</div>
 			</div>
-		</div>
-		<div class="footer_right_banner">
-			<div class="charge_board"></div>
+			<div class="footer_right_banner">
+				<span>大家围观的直播</span>
+				<div class="small_adv_banner">
+					<img src="../img/small_adv.png"></div>
+			</div>
 		</div>
 	</div>
 

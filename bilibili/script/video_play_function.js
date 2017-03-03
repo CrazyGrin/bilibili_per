@@ -58,7 +58,7 @@ comment_submit_button.addEventListener('click',function(){
 
 		var xml =  new XMLHttpRequest();
 
-		xml.open('POST', '../script/sned_comment.php', true);
+		xml.open('POST', '../script/send_comment.php', true);
 		xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		xml.send("user_account=" + user_account + "&video_id=" + video_id +"&comment_content=" + comment_input.value);
 

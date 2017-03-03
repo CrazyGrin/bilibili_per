@@ -18,7 +18,8 @@ ul
 {
     list-style: none;
 }
-li{
+li
+{
     cursor: pointer;
 }
 a
@@ -71,9 +72,9 @@ p.title_tip
     float: right;
 
     width: 780px;
+    margin: 0;
 
     opacity: .7;
-    margin: 0;
 }
 div.board_number_top
 {
@@ -149,6 +150,7 @@ img.big_video
 .blur
 {
     overflow: hidden;
+
     width: 100%;
     height: 42px;
 
@@ -173,6 +175,10 @@ img.big_video
     height: 42px;
     margin: 0 auto;
 }
+.nav a
+{
+    font-size: 12px;
+}
 .icon
 {
     position: absolute;
@@ -184,6 +190,7 @@ img.big_video
 
     background: url('../img/bilibili.png') no-repeat;
 }
+
 .nav_left_menu > li
 {
     line-height: 42px;
@@ -214,11 +221,12 @@ img.big_video
 }
 .nav_right_search
 {
-    opacity: 0;
     position: relative;
     right: 20px;
 
     height: 32px;
+
+    opacity: 0;
 }
 .nav_right_search > input
 {
@@ -259,43 +267,90 @@ img.big_video
 }
 .nav_right_user_list
 {
-    opacity: 0;
     line-height: 42px;
+
     height: 42px;
+
+    opacity: 0;
 }
 .head_pic_banner
 {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    float: left;
+
     width: 42px;
     height: 42px;
-    float: left;
-    position: relative;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
-    left: 0;
-    top: 0;
+
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
 }
 .head_pic_banner:hover
 {
-    width: 60px;
-    left: 9px;
     top: 10px;
+    left: 9px;
+
+    width: 60px;
 }
 .head_pic_banner:hover img.head_pic
 {
     width: 60px;
     height: 60px;
 }
+.head_pic_banner:hover .nav_user_info_board
+{
+    top: 32px;
+
+    height: 275px;
+}
 img.head_pic
 {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
     position: relative;
     left: 0;
+
+    width: 42px;
+    height: 42px;
+
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+
+    border-radius: 50%;
+}
+.nav_user_info_board
+{
+    position: absolute;
+    top: 42px;
+    left: -100px;
+
+    overflow: hidden;
+
+    width: 262px;
+    height: 0;
+
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 0 8px 3px rgba(0,0,0,.1);
+}
+.nav_user_info
+{
+    width: 262px;
+    height: 244px;
+}
+.nav_logout_button
+{
+    width: 262px;
+    height: 30px;
+
+    background-color: #f4f5f7;
 }
 .nav_right_user_list > li
 {
@@ -319,10 +374,11 @@ img.head_pic
 }
 .nav_right_log_list
 {
-    opacity: 0;
     line-height: 42px;
 
     height: 42px;
+
+    opacity: 0;
 }
 .nav_right_log_list > li
 {
@@ -506,14 +562,14 @@ img.head_pic
 }
 .main_extend_video > li
 {
+    position: relative;
+
     float: left;
     overflow: hidden;
 
     width: 160px;
     height: 155px;
     margin-right: 20px;
-
-    position: relative;
 }
 .main_extend_video > li:hover .video_brief
 {
@@ -558,15 +614,17 @@ img.head_pic
 }
 .main_comic_video > li
 {
+    position: relative;
+
     float: left;
     overflow: hidden;
 
     width: 160px;
     height: 168px;
     margin-right: 20px;
-    position: relative;
 }
-.main_comic_video > li:hover .video_brief{
+.main_comic_video > li:hover .video_brief
+{
     opacity: 1;
 }
 .main_comic_board

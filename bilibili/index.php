@@ -29,10 +29,13 @@
 					</li>
 				</ul>
 				<div class="nav_right_submit nav_right">投 稿</div>
-
 				<div class="nav_right_log nav_right">
 					<ul class="nav_right_user_list">
 						<div class="head_pic_banner">
+							<div class="nav_user_info_board">
+								<div class="nav_user_info"></div>
+								<div class="nav_logout_button"></div>
+							</div>
 							<img class="head_pic" src=<?php echo $_COOKIE["user_head_url"] ?>></div>
 						<li>
 							<a href="page/user_info.php">消息</a>
@@ -122,53 +125,69 @@
 				</ul>
 			</div>
 			<ul class="main_heat_video">
-				<li><a href="page/video_play.php" videoId="1">
-					<img class="small_video" src="img/demo1.png">
-					<div class="video_brief" videoId="1">
-						<p class="heat_video" videoId="1">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
-					</div></a>
+				<li>
+					<a href="page/video_play.php" videoId="1">
+						<img class="small_video" src="img/demo1.png">
+						<div class="video_brief" videoId="1">
+							<p class="heat_video" videoId="1">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
+						</div>
+					</a>
 				</li>
-				<li><a href="page/video_play.php" video_id="1">
-					<img class="small_video" src="img/demo2.png">
-					<div class="video_brief">
-						<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
-					</div></a>
+				<li>
+					<a href="page/video_play.php" video_id="1">
+						<img class="small_video" src="img/demo2.png">
+						<div class="video_brief">
+							<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
+						</div>
+					</a>
 				</li>
-				<li><a href="page/video_play.php" video_id="1">
-					<img class="small_video" src="img/demo3.png">
-					<div class="video_brief">
-						<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
-					</div></a>
+				<li>
+					<a href="page/video_play.php" video_id="1">
+						<img class="small_video" src="img/demo3.png">
+						<div class="video_brief">
+							<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
+						</div>
+					</a>
 				</li>
-				<li><a href="page/video_play.php" video_id="1">
-					<img class="small_video" src="img/demo4.png">
-					<div class="video_brief">
-						<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
-					</div></a>
+				<li>
+					<a href="page/video_play.php" video_id="1">
+						<img class="small_video" src="img/demo4.png">
+						<div class="video_brief">
+							<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
+						</div>
+					</a>
 				</li>
-				<li><a href="page/video_play.php" video_id="1">
-					<img class="small_video" src="img/demo8.png">
-					<div class="video_brief">
-						<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
-					</div></a>
+				<li>
+					<a href="page/video_play.php" video_id="1">
+						<img class="small_video" src="img/demo8.png">
+						<div class="video_brief">
+							<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
+						</div>
+					</a>
 				</li>
-				<li><a href="page/video_play.php" video_id="1">
-					<img class="small_video" src="img/demo6.png">
-					<div class="video_brief">
-						<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
-					</div></a>
+				<li>
+					<a href="page/video_play.php" video_id="1">
+						<img class="small_video" src="img/demo6.png">
+						<div class="video_brief">
+							<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
+						</div>
+					</a>
 				</li>
-				<li><a href="page/video_play.php" video_id="1">
-					<img class="small_video" src="img/demo7.png">
-					<div class="video_brief">
-						<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
-					</div></a>
+				<li>
+					<a href="page/video_play.php" video_id="1">
+						<img class="small_video" src="img/demo7.png">
+						<div class="video_brief">
+							<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
+						</div>
+					</a>
 				</li>
-				<li><a href="page/video_play.php" video_id="1">
-					<img class="small_video" src="img/demo5.png">
-					<div class="video_brief">
-						<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
-					</div></a>
+				<li>
+					<a href="page/video_play.php" video_id="1">
+						<img class="small_video" src="img/demo5.png">
+						<div class="video_brief">
+							<p class="heat_video">【崩坏3MMD】飘落的枫叶，起舞的樱花</p>
+						</div>
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -221,7 +240,7 @@
 			<div class="main_comic_nav">
 				<div class="main_comic_nav_title">
 					<img src="img/zone_icon.png" style="float: left;">
-					动画
+					番剧
 					<p class="title_tip">动画(｡･∀･)ﾉﾞ</p>
 				</div>
 			</div>
@@ -309,12 +328,12 @@
 				</ul>
 			</div>
 		</div>
-				<div class="main_extend">
+		<div class="main_extend">
 			<div class="main_extend_nav">
 				<div class="main_extend_nav_title">
 					<img src="img/zone_icon.png" style="float: left;">
-					推广
-					<p class="title_tip">最光荣的时刻,就是现在</p>
+					电影
+					<p class="title_tip">这里是电影</p>
 				</div>
 			</div>
 			<ul class="main_extend_video">
@@ -356,8 +375,8 @@
 			<div class="main_comic_nav">
 				<div class="main_comic_nav_title">
 					<img src="img/zone_icon.png" style="float: left;">
-					动画
-					<p class="title_tip">动画(｡･∀･)ﾉﾞ</p>
+					广告
+					<p class="title_tip">广告(｡･∀･)ﾉﾞ</p>
 				</div>
 			</div>
 			<ul class="main_comic_video">
@@ -444,8 +463,6 @@
 				</ul>
 			</div>
 		</div>
-
-
 
 	</div>
 	<div class="bottom">

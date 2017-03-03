@@ -25,6 +25,7 @@ window.onload = function(){
 	user_account = getCookie("user_account");
 	viewChange();
 	getIsOnline(user_account);
+	swing();
 
 };
 
@@ -45,7 +46,7 @@ function swing(){
 			swing_list.style.right = loaction;
 
 		};
-	},1000);
+	},3000);
 };
 
 //页面跳转
