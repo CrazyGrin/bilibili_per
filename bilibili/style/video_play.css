@@ -992,6 +992,7 @@ textarea.comment_input:focus
 }
 .show_comment_content
 {
+    padding-top: 30px;
     position: relative;
     top: 30px;
 
@@ -1001,6 +1002,10 @@ textarea.comment_input:focus
     min-height: 500px;
 
     border-top: 1px solid #e5e9ef;
+}
+.show_comment_content_list > li
+{
+    
 }
 
 .footer_right_banner

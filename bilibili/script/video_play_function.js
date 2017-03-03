@@ -15,19 +15,19 @@ var comment_input = document.querySelector('.comment_input');
 
 
 //载入函数
-window.onload = function(){
+window.onload = function() {
 
 	user_account = getCookie("user_account");
 	video_id = getCookie("video_id");
-	
+
 	viewChange();
 
 };
 
 //根据用户登录状态改变页面
-function viewChange(){
+function viewChange() {
 
-	if (user_account != '') {
+	if (user_account != null) {
 
 		isonline = 1;
 
@@ -39,7 +39,7 @@ function viewChange(){
 		user_list.style.display = "block";
 		user_list.style.opacity = "1";
 
-	}else{
+	} else {
 
 		isonline = 0;
 
@@ -53,22 +53,26 @@ function viewChange(){
 	};
 };
 
-comment_submit_button.addEventListener('click',function(){
-	if (comment_input.value !='' && comment_input.value.length <= 100) {
+comment_submit_button.addEventListener('click', function() {
+	if (getCookie("user_account") != null) {
+		if (comment_input.value != '' && comment_input.value.length <= 100) {
 
-		var xml =  new XMLHttpRequest();
+			var xml = new XMLHttpRequest();
 
-		xml.open('POST', '../script/send_comment.php', true);
-		xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-		xml.send("user_account=" + user_account + "&video_id=" + video_id +"&comment_content=" + comment_input.value);
+			xml.open('POST', '../script/send_comment.php', true);
+			xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xml.send("user_account=" + user_account + "&video_id=" + video_id + "&comment_content=" + comment_input.value);
 
-		xml.onreadystatechange = function(){
+			xml.onreadystatechange = function() {
 
-			if (xml.readyState === 4 && xml.status === 200) {
-				alert(xml.responseText);
+				if (xml.readyState === 4 && xml.status === 200) {
+					alert(xml.responseText);
+				};
+
 			};
 
 		};
-
-	};
+	}else{
+		alert("请先登录");
+	}
 });

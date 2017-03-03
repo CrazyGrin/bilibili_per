@@ -1,3 +1,10 @@
+<?php
+		$video_id = $_COOKIE['video_id'];
+		$pdo = new PDO("mysql:host=localhost;dbname=bilibili","admin","admin");
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		$req = $pdo->query("select * from video_comment where video_id ='{$video_id}'");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +44,14 @@
 								<div class="nav_user_info"></div>
 								<div class="nav_logout_button"></div>
 							</div>
-							<img class="head_pic" src=<?php echo $_COOKIE["user_head_sub_url"] ?>></div>
+							<img class="head_pic" src=<?php 
+							if (isset($_COOKIE["user_head_sub_url"])) {
+								echo $_COOKIE["user_head_sub_url"];
+							}else
+							{
+								echo "";
+							};
+							?>></div>
 						<li>
 							<a href="user_info.php">消息</a>
 						</li>
@@ -386,11 +400,28 @@
 						<br>我是一个用户demo , 233333333333</p>
 				</div>
 				<div class="footer_video_coment">
-					<img class="head_pic_comment" src=<?php echo $_COOKIE["user_head_sub_url"] ?>
+					<img class="head_pic_comment" src=<?php 
+							if (isset($_COOKIE["user_head_sub_url"])) {
+								echo $_COOKIE["user_head_sub_url"];
+							}else
+							{
+								echo "";
+							};
+							?>
 					>
 					<div class="comment_submit_button">发表评论</div>
 					<textarea class="comment_input" type="text" name="comment_content" placeholder="请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。"></textarea>
-					<div class="show_comment_content"></div>
+					<div class="show_comment_content">
+						<ul class="show_comment_content_list"></ul>
+						<?php
+							while($row=$req->fetch()){
+        						echo "ID:".$row['comment_content'];
+        						echo "<br>";
+        						echo "NAME:".$row['user_account'];
+        						echo "<br>";
+							}
+  						?>
+					</div>
 				</div>
 			</div>
 			<div class="footer_right_banner">
