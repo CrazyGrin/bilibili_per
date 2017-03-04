@@ -992,7 +992,7 @@ textarea.comment_input:focus
 }
 .show_comment_content
 {
-    padding-top: 30px;
+    padding-top: 10px;
     position: relative;
     top: 30px;
 
@@ -1000,14 +1000,42 @@ textarea.comment_input:focus
 
     width: 870px;
     min-height: 500px;
-
-    border-top: 1px solid #e5e9ef;
 }
-.show_comment_content_list > li
+.comment_banner
 {
-    
+    width: 870px;
+    height: 110px;
+    position: relative;
 }
-
+.show_comment_content_list
+{
+    width: 870px;
+    min-height: 220px;
+}
+.show_comment_content_list li
+{
+    width: 785px;
+    height: 110px;
+    float: right;
+    border-top: 1px solid #e5e9ef;
+    padding-top: 10px;
+}
+p.user_account
+{
+    margin: 0;
+    width: 785px;
+    padding: 0;
+    font-weight: 700;
+    height: 30px;
+    line-height: 30px;
+}
+p.comment_content{
+    margin: 0;
+    width: 785px;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+}
 .footer_right_banner
 {
     float: right;

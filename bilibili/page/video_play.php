@@ -3,7 +3,9 @@
 		$pdo = new PDO("mysql:host=localhost;dbname=bilibili","admin","admin");
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$req = $pdo->query("select * from video_comment where video_id ='{$video_id}'");
+		$req_video_comment = $pdo->query("select * from video_comment where video_id ='{$video_id}'");
+		
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -153,7 +155,7 @@
 					</ul>
 				</div>
 				<div class="user_info">
-					<p class="user_name">我是韦德戈林</p>
+					<p class="user_name">韦德戈林</p>
 					<p class="user_brief">网易云ID：Toch_Her , 我是一个用户demo , 23333333</p>
 					<p class="video_count">投稿 : 1W</p>
 					<p class="user_fan">粉丝 : 123456789</p>
@@ -412,15 +414,13 @@
 					<div class="comment_submit_button">发表评论</div>
 					<textarea class="comment_input" type="text" name="comment_content" placeholder="请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。"></textarea>
 					<div class="show_comment_content">
-						<ul class="show_comment_content_list"></ul>
-						<?php
-							while($row=$req->fetch()){
-        						echo "ID:".$row['comment_content'];
-        						echo "<br>";
-        						echo "NAME:".$row['user_account'];
-        						echo "<br>";
+						<ul class="show_comment_content_list">
+							<?php
+							while($row=$req_video_comment->fetch()){
+        						echo '<div class="comment_banner"><img class="head_pic_comment" src='.$row['user_head_sub_url'].'><li><p class="user_account">'.$row['user_account'].'</p><br><p class="comment_content">'.$row['comment_content'].'</p></li></div>';
 							}
   						?>
+						</ul>
 					</div>
 				</div>
 			</div>
