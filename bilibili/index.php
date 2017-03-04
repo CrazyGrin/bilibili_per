@@ -78,10 +78,10 @@
 		<div class="main_nav">
 			<ul class="main_nav_list">
 				<li>
-					<a href="">首页</a>
+					<a href="#">首页</a>
 				</li>
 				<li>
-					<a href="">动画</a>
+					<a href="page/video_zone.php" zone="1">动画</a>
 				</li>
 				<li>
 					<a href="">番剧</a>

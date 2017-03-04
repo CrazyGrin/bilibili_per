@@ -13,13 +13,16 @@ var comment_submit_button = document.querySelector('.comment_submit_button');
 //输入框
 var comment_input = document.querySelector('.comment_input');
 
+//发送弹幕的dom
+var send_danmu_button = document.querySelector('.send_danmu_button');
+//输入框
+var danmu_input = document.querySelector('.danmu_input');
 
 //载入函数
 window.onload = function() {
 
 	user_account = getCookie("user_account");
 	video_id = getCookie("video_id");
-
 	viewChange();
 
 };
@@ -53,6 +56,22 @@ function viewChange() {
 	};
 };
 
+//退出登录
+logout_button.addEventListener('click',function(){
+	var xml = new XMLHttpRequest();
+
+	xml.open('POST', 'script/logout_function.php', true);
+	xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xml.send("user_account=" + getCookie("user_account"));
+
+	setInterval(function(){
+		location.reload(true);
+		loaction = 0;
+	},1000);
+});
+
+
+//发送评论
 comment_submit_button.addEventListener('click', function() {
 	if (getCookie("user_account") != null) {
 		if (comment_input.value != '' && comment_input.value.length <= 100) {
@@ -66,7 +85,7 @@ comment_submit_button.addEventListener('click', function() {
 			xml.onreadystatechange = function() {
 
 				if (xml.readyState === 4 && xml.status === 200) {
-					alert(xml.responseText);
+					console.log(xml.responseText);
 				};
 
 			};
@@ -76,3 +95,58 @@ comment_submit_button.addEventListener('click', function() {
 		alert("请先登录");
 	}
 });
+
+//储存弹幕
+send_danmu_button.addEventListener('click', function() {
+
+	if (getCookie("user_account") != null) {
+		if (danmu_input.value != '' && danmu_input.value.length <= 100) {
+
+			var xml = new XMLHttpRequest();
+
+			xml.open('POST', '../script/send_danmu.php', true);
+			xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xml.send("user_account=" + user_account + "&video_id=" + video_id + "&danmu_content=" + danmu_input.value);
+
+			xml.onreadystatechange = function() {
+
+				if (xml.readyState === 4 && xml.status === 200) {
+					console.log(xml.responseText);
+				};
+
+			};
+
+		}else{
+			alert("弹幕也太长了吧");
+		}
+	}else{
+		alert("请先登录");
+	}
+});
+
+//发送弹幕
+send_danmu_button.addEventListener('click',function(){
+
+	var danmu_view_banner = document.querySelector("#danmu_view_banner"); 
+	var new_danmu_item = document.createElement("div");
+
+	new_danmu_item.className = "danmu_item";
+	new_danmu_item.innerHTML = danmu_input.value;
+
+	danmu_view_banner.appendChild(new_danmu_item);
+
+	danmu_move(new_danmu_item);
+});
+
+function danmu_move(danmu){
+	var speed = 1;
+	var position = -200;
+
+	var move = setInterval(function(){
+		if (position < 860) {
+			danmu.style.right = position + speed + "px";
+			position += speed;
+		};
+	},10);
+
+};

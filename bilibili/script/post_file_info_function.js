@@ -23,7 +23,7 @@ var video_zone_content = '';
 
 //載入
 window.onload = function(){
-	alert("demo");
+	console.log("get in");
 }
 
 

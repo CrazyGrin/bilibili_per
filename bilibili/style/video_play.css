@@ -266,7 +266,7 @@ img.head_pic
 
     border-radius: 50%;
 }
-.nav_user_info_board
+. 
 {
     position: absolute;
     top: 42px;
@@ -598,12 +598,39 @@ p.user_fan
 }
 .main_video
 {
+    position: relative;
+
     float: left;
+/*    overflow: hidden;*/
 
     width: 860px;
     height: 647px;
 
     background-color: gray;
+}
+.danmu_view_banner
+{
+    position: absolute;
+    top: 0;
+
+    overflow: hidden;
+
+    width: 860px;
+
+    height: 647px;
+
+}
+.danmu_item
+{
+    line-height: 40px;
+
+    position: absolute;
+    right: -200px;    /*  ->860px,del;  */
+
+    width: 200px;
+    height: 40px;
+
+    color: #fff;
 }
 .main_danmu_send_input
 {
@@ -677,7 +704,7 @@ p.user_fan
 }
 .main_danmu_list > li:hover
 {
-    background-color: #f6f9fa;
+    background-color: rgba(0,0,0,.1);
 }
 span.time
 {
@@ -685,7 +712,7 @@ span.time
 
     width: 60px;
     height: 30px;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 .main_danmu_history
 {
@@ -847,7 +874,7 @@ p.function_data
 .footer_banner
 {
     width: 1160px;
-    height: 1000px;
+    min-height: 800px;
     margin: 0 auto;
 
     background-color: #fff;
@@ -927,12 +954,14 @@ p.video_brief
 
     opacity: .7;
 }
-.footer_video_coment
+.footer_video_comment
 {
     float: left;
+    overflow: scroll;
+    overflow-x: hidden;
 
     width: 870px;
-    min-height: 600px;
+    min-height: 800px;
     padding-top: 30px;
 }
 img.head_pic_comment
@@ -992,7 +1021,6 @@ textarea.comment_input:focus
 }
 .show_comment_content
 {
-    padding-top: 10px;
     position: relative;
     top: 30px;
 
@@ -1000,12 +1028,14 @@ textarea.comment_input:focus
 
     width: 870px;
     min-height: 500px;
+    padding-top: 10px;
 }
 .comment_banner
 {
+    position: relative;
+
     width: 870px;
     height: 110px;
-    position: relative;
 }
 .show_comment_content_list
 {
@@ -1014,27 +1044,32 @@ textarea.comment_input:focus
 }
 .show_comment_content_list li
 {
+    float: right;
+
     width: 785px;
     height: 110px;
-    float: right;
-    border-top: 1px solid #e5e9ef;
     padding-top: 10px;
+
+    border-top: 1px solid #e5e9ef;
 }
 p.user_account
 {
-    margin: 0;
-    width: 785px;
-    padding: 0;
     font-weight: 700;
-    height: 30px;
     line-height: 30px;
-}
-p.comment_content{
-    margin: 0;
+
     width: 785px;
-    padding: 0;
     height: 30px;
+    margin: 0;
+    padding: 0;
+}
+p.comment_content
+{
     line-height: 30px;
+
+    width: 785px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
 }
 .footer_right_banner
 {
@@ -1042,16 +1077,17 @@ p.comment_content{
 
     width: 260px;
     height: 600px;
-
-padding-top: 30px;
+    padding-top: 30px;
 }
 .footer_right_banner span
 {
+    font-size: 16px;
+    line-height: 30px;
+
+    position: relative;
+
     width: 260px;
     height: 30px;
-    line-height: 30px;
-    font-size: 16px;
-    position: relative;
 }
 .small_adv_banner
 {
@@ -1073,7 +1109,7 @@ padding-top: 30px;
 .bottom
 {
     position: relative;
-    top: 50px;
+    z-index: 3;
 
     width: 100%;
     height: 422px;

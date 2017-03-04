@@ -1,10 +1,17 @@
 <?php
 		$video_id = $_COOKIE['video_id'];
 		$pdo = new PDO("mysql:host=localhost;dbname=bilibili","admin","admin");
-		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$pdo->
+setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$req_video_comment = $pdo->query("select * from video_comment where video_id ='{$video_id}'");
-		
+
+		$req_video_info = $pdo->query("select * from video_info where video_id ='{$video_id}'");
+		$req_video_info_data = $req_video_info->fetch(PDO::FETCH_ASSOC);
+
+		$req_video_danmu = $pdo->query("select * from video_danmu where video_id ='{$video_id}'");
+
+		$req_video_danmu_num = $pdo->query("select count(*) from video_danmu where video_id ='{$video_id}'");
 
 ?>
 <!DOCTYPE html>
@@ -44,7 +51,7 @@
 						<div class="head_pic_banner">
 							<div class="nav_user_info_board">
 								<div class="nav_user_info"></div>
-								<div class="nav_logout_button"></div>
+								<div class="nav_logout_button">退出</div>
 							</div>
 							<img class="head_pic" src=<?php 
 							if (isset($_COOKIE["user_head_sub_url"])) {
@@ -88,7 +95,7 @@
 			<div class="main_nav">
 				<ul class="main_nav_list">
 					<li>
-						<a href="">首页</a>
+						<a href="../index.php">首页</a>
 					</li>
 					<li>
 						<a href="">动画</a>
@@ -132,12 +139,16 @@
 		<div class="main_video_info_banner">
 			<div class="main_video_info">
 				<div class="video_info">
-					<p class="video_tittle">【布琪❤Bonbon❤离澈】Spending All My Time ♪ ( ´ ε ｀ )</p>
-					<!-- <p class="video_zone">
-					主页 >
-					< ? php echo0 $_COOKIE['video_zone'] ? ></p>
-					-->
-					<p class="video_zone">主页 > 生活</p>
+					<p class="video_tittle">
+						.
+						<?php
+											echo $req_video_info_data['video_tittle'];
+											?></p>
+					<p class="video_zone">
+						主页 >
+						<?php
+											echo $req_video_info_data['video_zone'];
+											?></p>
 					<p class="video_date">2017-3-1 00:00</p>
 					<br>
 					<br>
@@ -149,7 +160,11 @@
 						<li style="width: 150px;border-right: 1px solid #e5e9ef;">
 							<img src="../img/video_board.png" style="float: left;margin-right: 10px;">全站最高排名1</li>
 						<li style="width: 120px;">
-							<img src="../img/video_coin.png" style="float: left;margin-right: 10px;">硬币1000</li>
+							<img src="../img/video_coin.png" style="float: left;margin-right: 10px;">
+							硬币
+							<?php
+												echo $req_video_info_data['video_coin'];
+											?></li>
 						<li>
 							<img src="../img/video_like.png" style="float: left;margin-right: 10px;">收藏1W</li>
 					</ul>
@@ -170,13 +185,20 @@
 		<br>
 		<div class="main_video_play">
 			<div class="main_video">
+			<div class="danmu_view_banner" id="danmu_view_banner"></div>
+			<div class="danmu_item"></div>
 				<video width="860" height="647" style="background-color: black;" controls >
 					<source src="../video/demo.mp4" type="video/mp4"></video>
 			</div>
 			<div class="main_danmu">
 				<div class="main_danmu_info">
 					<span style="font-size: 18px;color: black;font-weight: 700;">1</span>
-					人正在看 , 条弹幕
+					人正在看 ,
+					<?php
+									$row_num = $req_video_danmu_num->
+					fetch();
+									echo $row_num[0];
+								?>条弹幕
 				</div>
 				<div class="main_danmu_content">
 					<ul class="main_danmu_tittle">
@@ -186,152 +208,17 @@
 						</li>
 					</ul>
 					<ul class="main_danmu_list">
+						<?php
+							while($row=$req_video_danmu->
+						fetch()){
+        						echo '
 						<li>
-							<span class="time">00:00</span>
-							第一!
+							<' . 'span class="time">' . $row['danmu_date'] . '</' . 'span>
+							' . $row['danmu_content'] . '
 						</li>
-						<li>
-							<span class="time">00:01</span>
-							好厉害啊
-						</li>
-						<li>
-							<span class="time">00:10</span>
-							一起观看的177个小伙伴们,你们好啊
-						</li>
-						<li>
-							<span class="time">00:28</span>
-							bilibili[]~(￣▽￣)~
-						</li>
-						<li>
-							<span class="time">00:29</span>
-							呃(⊙o⊙)…
-						</li>
-						<li>
-							<span class="time">00:46</span>
-							你们吼啊
-						</li>
-						<li>
-							<span class="time">00:00</span>
-							第一!
-						</li>
-						<li>
-							<span class="time">00:01</span>
-							好厉害啊
-						</li>
-						<li>
-							<span class="time">00:10</span>
-							一起观看的177个小伙伴们,你们好啊
-						</li>
-						<li>
-							<span class="time">00:28</span>
-							bilibili[]~(￣▽￣)~
-						</li>
-						<li>
-							<span class="time">00:29</span>
-							呃(⊙o⊙)…
-						</li>
-						<li>
-							<span class="time">00:46</span>
-							你们吼啊
-						</li>
-						<li>
-							<span class="time">00:00</span>
-							第一!
-						</li>
-						<li>
-							<span class="time">00:01</span>
-							好厉害啊
-						</li>
-						<li>
-							<span class="time">00:10</span>
-							一起观看的177个小伙伴们,你们好啊
-						</li>
-						<li>
-							<span class="time">00:28</span>
-							bilibili[]~(￣▽￣)~
-						</li>
-						<li>
-							<span class="time">00:29</span>
-							呃(⊙o⊙)…
-						</li>
-						<li>
-							<span class="time">00:46</span>
-							你们吼啊
-						</li>
-
-						<li>
-							<span class="time">00:00</span>
-							第一!
-						</li>
-						<li>
-							<span class="time">00:01</span>
-							好厉害啊
-						</li>
-						<li>
-							<span class="time">00:10</span>
-							一起观看的177个小伙伴们,你们好啊
-						</li>
-						<li>
-							<span class="time">00:28</span>
-							bilibili[]~(￣▽￣)~
-						</li>
-						<li>
-							<span class="time">00:29</span>
-							呃(⊙o⊙)…
-						</li>
-						<li>
-							<span class="time">00:46</span>
-							你们吼啊
-						</li>
-						<li>
-							<span class="time">00:00</span>
-							第一!
-						</li>
-						<li>
-							<span class="time">00:01</span>
-							好厉害啊
-						</li>
-						<li>
-							<span class="time">00:10</span>
-							一起观看的177个小伙伴们,你们好啊
-						</li>
-						<li>
-							<span class="time">00:28</span>
-							bilibili[]~(￣▽￣)~
-						</li>
-						<li>
-							<span class="time">00:29</span>
-							呃(⊙o⊙)…
-						</li>
-						<li>
-							<span class="time">00:46</span>
-							你们吼啊
-						</li>
-
-						<li>
-							<span class="time">00:00</span>
-							第一!
-						</li>
-						<li>
-							<span class="time">00:01</span>
-							好厉害啊
-						</li>
-						<li>
-							<span class="time">00:10</span>
-							一起观看的177个小伙伴们,你们好啊
-						</li>
-						<li>
-							<span class="time">00:28</span>
-							bilibili[]~(￣▽￣)~
-						</li>
-						<li>
-							<span class="time">00:29</span>
-							呃(⊙o⊙)…
-						</li>
-						<li>
-							<span class="time">00:46</span>
-							你们吼啊
-						</li>
+						';
+							}
+  						?>
 					</ul>
 					<div class="main_danmu_history">历史弹幕</div>
 				</div>
@@ -401,7 +288,7 @@
 						网易云ID：Toch_Her
 						<br>我是一个用户demo , 233333333333</p>
 				</div>
-				<div class="footer_video_coment">
+				<div class="footer_video_comment">
 					<img class="head_pic_comment" src=<?php 
 							if (isset($_COOKIE["user_head_sub_url"])) {
 								echo $_COOKIE["user_head_sub_url"];
@@ -416,8 +303,18 @@
 					<div class="show_comment_content">
 						<ul class="show_comment_content_list">
 							<?php
-							while($row=$req_video_comment->fetch()){
-        						echo '<div class="comment_banner"><img class="head_pic_comment" src='.$row['user_head_sub_url'].'><li><p class="user_account">'.$row['user_account'].'</p><br><p class="comment_content">'.$row['comment_content'].'</p></li></div>';
+							while($row=$req_video_comment->
+							fetch()){
+        						echo '
+							<div class="comment_banner">
+								<img class="head_pic_comment" src='.$row['user_head_sub_url'].'>
+								<li>
+									<p class="user_account">'.$row['user_account'].'</p>
+									<br>
+									<p class="comment_content">'.$row['comment_content'].'</p>
+								</li>
+							</div>
+							';
 							}
   						?>
 						</ul>

@@ -14,7 +14,6 @@ var user_list = document.querySelector('.nav_right_user_list');
 
 var user_account = '';
 
-
 //所有a标签
 var a_tag = document.querySelector('.main_heat_video');
 
@@ -116,7 +115,10 @@ function getIsOnline(user_account){
 		if (xml.readyState === 4 && xml.status === 200) {
 
 			if (xml.responseText<1) {
-				//清除cookie(未完成)
+
+				xml.open('POST', 'script/del_cookie.php', true);
+				xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xml.send("name=" + user_account);
 
 			};
 
@@ -135,6 +137,8 @@ logout_button.addEventListener('click',function(){
 	xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	xml.send("user_account=" + getCookie("user_account"));
 
-	location.reload(true);
-	loaction = 0;
+	setInterval(function(){
+		location.reload(true);
+		loaction = 0;
+	},1000);
 });
